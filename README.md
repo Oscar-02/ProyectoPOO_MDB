@@ -40,6 +40,7 @@ Para evitar estos problemas, recomendamos instalarlos manualmente. Para instalar
 | Microsoft.Data.SqlClient| `Install-Package Microsoft.Data.SqlClient -Version 4.0.0-preview3.21293.2` |
 <br/>
 ## Requisitos Adicionales
+
 Tambien necesarios, la aplicacion necesita de estos requisitos para que funcione totalmente y sin errores detectados.
 | Requisito | Version Minima | Mas Informacion|
 | :- | :-: | -: |
