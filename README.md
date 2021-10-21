@@ -44,4 +44,4 @@ Para evitar estos problemas, recomendamos instalarlos manualmente. Para instalar
 Tambien necesarios, la aplicacion necesita de estos requisitos para que funcione totalmente y sin errores detectados.
 | Requisito | Version Minima | Mas Informacion|
 | :- | :-: | -: |
-| Windows 10 - Windows 11 | Win10 v1809 comp. 17763 <br/> Win11 v21H1 comp. 22000 | Verifica si existen actualizaciones desde [Windows Update](ms-settings:windowsupdate) |
+| Windows 10 - Windows 11 | Win10 v1809 comp. 17763 <br/> Win11 v21H1 comp. 22000 | Verifica si existen actualizaciones desde <a href = "ms-settings:windowsupdate">Windows Update</a>. |
