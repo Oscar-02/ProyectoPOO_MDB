@@ -39,6 +39,10 @@
       "frameworks": {
         "uap10.0.17763": {
           "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.0.0-preview3.21293.2, )"
+            },
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.2.12, )"

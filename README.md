@@ -31,4 +31,16 @@ A diferencia de `.NET Framework`, `.NET` no incluye ciertos paquetes / referenci
 Para evitar estos problemas, recomendamos instalarlos manualmente. Para instalarlos, deben:
 
 - Abrir Visual Studio con la solucion y proyecto `Windows_ClinicaDental` abiertos.
-- Ir a Herramientas 
+- Ir a _Pestaña Herramientas > Administrador de paquetes NuGet > Consola de Administrador de Paquetes_. <br/> Se abrira una consola de Powershell.
+- Insertar un comando por paquete segun la siguiente tabla:
+
+| Paquete NuGet | Comando de Powershell |
+| - | -: |
+| Microsoft.UI.Xaml | `Install-Package Microsoft.UI.Xaml -Version 2.8.0-prerelease.210927001` |
+| Microsoft.Data.SqlClient| `Install-Package Microsoft.Data.SqlClient -Version 4.0.0-preview3.21293.2` |
+<br/>
+## Requisitos Adicionales
+Tambien necesarios, la aplicacion necesita de estos requisitos para que funcione totalmente y sin errores detectados.
+| Requisito | Version Minima | Mas Informacion|
+| :- | :-: | -: |
+| Windows 10 - Windows 11 | Win10 v1809 comp. 17763 <br/> Win11 v21H1 comp. 22000 | Verifica si existen actualizaciones desde [Windows Update](ms-settings:windowsupdate) |
