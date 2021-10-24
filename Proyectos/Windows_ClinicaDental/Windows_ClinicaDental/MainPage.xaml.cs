@@ -22,9 +22,17 @@ namespace Windows_ClinicaDental
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public static MainPage Current;
         public MainPage()
         {
             this.InitializeComponent();
+            Current = this;
+            Loaded += MainPage_Loaded;
+        }
+
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (this.IsLoaded) content.Navigate(typeof(BeforeLogin.ReqCheckPage));
         }
     }
 }

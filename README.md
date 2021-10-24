@@ -1,3 +1,10 @@
+![C#-Shield](https://img.shields.io/badge/Lenguaje-C%23-brightgreen.svg)
+![SQL-Shield](https://img.shields.io/badge/Proveedor%20Base%20de%20Datos-SQL%20Server-red.svg)
+
+### **SI ERES UN DESARROLLADOR Y DESEAS EJECUTAR ESTA APLICACION, NECESITAS LEER LA SECCION _"Requisitos para desarrolladores"_**
+
+<br/><br/>
+
 # Clinica Dental
 ### Proyecto para **Programacion Orientada a Objetos** (POO) y **Modelamiento de Bases de Datos** (MDB).
 <br />
@@ -38,6 +45,12 @@ Para evitar estos problemas, recomendamos instalarlos manualmente. Para instalar
 | - | -: |
 | Microsoft.UI.Xaml | `Install-Package Microsoft.UI.Xaml -Version 2.8.0-prerelease.210927001` |
 | Microsoft.Data.SqlClient| `Install-Package Microsoft.Data.SqlClient -Version 4.0.0-preview3.21293.2` |
+| Microsoft.Win32.Registry | `Install-Package Microsoft.Win32.Registry -Version 6.0.0-preview.5.21301.5` |
+| Microsoft.SqlServer.ConnectionInfo | `Install-Package Microsoft.SqlServer.ConnectionInfo -Version 150.18097.0-xplat` |
+| Microsoft.SqlServer.SqlManagementObjects | `Install-Package Microsoft.SqlServer.SqlManagementObjects -Version 161.46521.71` |
+| System.Drawing.Common | `Install-Package System.Drawing.Common -Version 6.0.0-rc.2.21480.5` |
+| Win2D.uwp | `Install-Package Win2D.uwp -Version 1.26.0` |
+
 <br/>
 
 ## Requisitos Adicionales
