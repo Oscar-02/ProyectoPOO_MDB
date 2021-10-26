@@ -16,25 +16,25 @@ namespace Windows_ClinicaDental
     public class sqlDataConnector
     {
         public static SettingsReader sqlSettings = new SettingsReader();
-        public static (bool, SqlException) SQLServerCnnTest() //Prueba si se puede conectar SQL Server
+        public static bool SQLServerCnnTest() //Prueba si se puede conectar SQL Server
         {
             SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(sqlSettings,"master"));
             try
             {
                 cnn.Open();
             }
-            catch (SqlException err)
+            catch (SqlException)
             {
-                return (false, err);
+                return false;
             }
             if (cnn.State == ConnectionState.Open)
             {
                 cnn.Close();
-                return (true, null);
+                return true;
             }
             else
             {
-                return (false, null);
+                return false;
             }
         }
 
