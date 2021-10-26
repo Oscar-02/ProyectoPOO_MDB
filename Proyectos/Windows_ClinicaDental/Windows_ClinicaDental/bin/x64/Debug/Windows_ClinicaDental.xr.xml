@@ -47,6 +47,8 @@
     <RootType FullName="Windows.UI.Xaml.Controls.FontIcon">
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Glyph" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
@@ -57,6 +59,27 @@
     </RootType>
     <RootType FullName="Windows_ClinicaDental.BeforeLogin.ReqCheckPage" />
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows_ClinicaDental.Datos.PatientsDataPage" />
+    <RootType FullName="Windows_ClinicaDental.Datos.ServicesPage" />
+    <RootType FullName="Windows_ClinicaDental.HomePage.HomePage" />
+    <RootType FullName="Microsoft.UI.Xaml.Controls.NavigationView">
+      <RootProperty Name="IsPaneOpen" />
+      <RootProperty Name="IsSettingsVisible" />
+      <RootProperty Name="MenuItems" />
+      <RootProperty Name="FooterMenuItems" />
+      <RootProperty Name="Content" />
+      <RootEvent Name="ItemInvoked" />
+    </RootType>
+    <RootType FullName="Microsoft.UI.Xaml.Controls.NavigationViewItem">
+      <RootProperty Name="Tag" />
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator" />
+    <RootType FullName="Microsoft.UI.Xaml.Controls.NavigationViewItemHeader">
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
     <RootType FullName="Windows_ClinicaDental.HomePage.HomePageBase" />
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="ImageSource" />
@@ -77,6 +100,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Header" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Width" />
@@ -84,6 +108,15 @@
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="PasswordRevealMode" />
       <RootProperty Name="Header" />
+      <RootProperty Name="IsPasswordRevealButtonEnabled" />
+      <RootEvent Name="KeyDown" />
+    </RootType>
+    <RootType FullName="Microsoft.UI.Xaml.Controls.TeachingTip">
+      <RootProperty Name="Target" />
+      <RootProperty Name="PreferredPlacement" />
+      <RootProperty Name="Title" />
+      <RootProperty Name="Subtitle" />
+      <RootProperty Name="IconSource" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Style" />
@@ -94,13 +127,28 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
+    <RootType FullName="Microsoft.UI.Xaml.Controls.FontIconSource">
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Glyph" />
+    </RootType>
     <RootType FullName="Windows_ClinicaDental.LoginPage.LoginPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
     <RootType FullName="Microsoft.UI.Xaml.Controls.InfoBar">
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows_ClinicaDental.MainPage" />
+    <RootType FullName="Windows_ClinicaDental.PacientesCitas.AppointmentsPage" />
+    <RootType FullName="Windows_ClinicaDental.PacientesCitas.PatientsPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="Header" />
+      <RootProperty Name="Items" />
+      <RootProperty Name="Margin" />
+      <RootEvent Name="SelectionChanged" />
+    </RootType>
+    <RootType FullName="System.String" />
+    <RootType FullName="Windows_ClinicaDental.Settings.Settings" />
+    <RootType FullName="Windows_ClinicaDental.Settings.SystemUserSettings" />
   </Roots.RootTypes>
 </Roots>

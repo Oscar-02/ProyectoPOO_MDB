@@ -15,9 +15,10 @@ namespace Windows_ClinicaDental
 {
     public class sqlDataConnector
     {
+        public static SettingsReader sqlSettings = new SettingsReader();
         public static (bool, SqlException) SQLServerCnnTest() //Prueba si se puede conectar SQL Server
         {
-            SqlConnection cnn = new SqlConnection("Integrated Security=true; Initial Catalog=master; server=127.0.0.1,1433");
+            SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(sqlSettings,"master"));
             try
             {
                 cnn.Open();
@@ -39,7 +40,7 @@ namespace Windows_ClinicaDental
 
         public static (bool, bool) SSdbChecker()
         {
-            SqlConnection cnn = new SqlConnection("Integrated Security=true; Initial Catalog=master; server=127.0.0.1,1433");
+            SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(sqlSettings, "master"));
             if (cnn.State == ConnectionState.Closed)
             {
                 try
@@ -65,7 +66,7 @@ namespace Windows_ClinicaDental
 
         public static bool SSdbCreator()
         {
-            SqlConnection cnn = new SqlConnection("Integrated Security=true; Initial Catalog=master; server=127.0.0.1,1433");
+            SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(sqlSettings, "master"));
             try
             {
                 cnn.Open();
@@ -90,6 +91,8 @@ namespace Windows_ClinicaDental
 
     public class sqlLoginUser
     {
+        public static SettingsReader sqlSettings = new SettingsReader();
+
         public string UserName {  get; set; }
         protected string Password { get; set; }
         public string Name { get; set; }
@@ -109,7 +112,7 @@ namespace Windows_ClinicaDental
              * message 3 : default
              */
             sqlLoginUser current = new sqlLoginUser();
-            SqlConnection cnn = new SqlConnection("Integrated Security=true; Initial Catalog=ClinicaDental; server=127.0.0.1,1433");
+            SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(sqlSettings, "ClinicaDental"));
             try
             {
                 cnn.Open();

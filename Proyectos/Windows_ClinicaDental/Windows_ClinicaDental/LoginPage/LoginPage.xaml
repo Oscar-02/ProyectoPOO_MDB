@@ -35,7 +35,8 @@
                         </StackPanel>
                     </TextBox.Header>
                 </TextBox>
-                <PasswordBox x:Name="password" Width="196" Margin="0,30,0,0" PlaceholderText="Contraseña" PasswordRevealMode="Peek">
+                <PasswordBox x:Name="password" Width="196" Margin="0,30,0,0" PlaceholderText="Contraseña" 
+                             PasswordRevealMode="Peek" KeyDown="password_KeyDown">
                     <PasswordBox.Header>
                         <StackPanel Orientation="Horizontal">
                             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe72e;"/>
@@ -43,6 +44,13 @@
                         </StackPanel>
                     </PasswordBox.Header>
                 </PasswordBox>
+                <controls:TeachingTip x:Name="PwdTip" Target="{x:Bind password}" PreferredPlacement="Right"
+                                      Title="Inicia sesion rapida con solo presionar 'Enter', '&#x23CE;', 'Return' o 'Entrar'"
+                                      Subtitle="Digita tu contraseña y presiona la tecla para iniciar sesion sin necesidad de usar el mouse.">
+                    <controls:TeachingTip.IconSource>
+                        <controls:FontIconSource FontFamily="Segoe Fluent Icons" Glyph="&#xe751;"/>
+                    </controls:TeachingTip.IconSource>
+                </controls:TeachingTip>
                 <Button x:Name="login" Style="{StaticResource AccentButtonStyle}" Click="login_Click"
                         HorizontalAlignment="Center" Margin="0,30" Width="196">
                     <Button.Content>

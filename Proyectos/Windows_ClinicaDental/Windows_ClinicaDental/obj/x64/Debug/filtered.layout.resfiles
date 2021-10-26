@@ -48,9 +48,16 @@ Assets\Wide310x150Logo.scale-200.png
 Assets\Wide310x150Logo.scale-400.png
 App.xbf
 BeforeLogin\ReqCheckPage.xbf
+Datos\PatientsDataPage.xbf
+Datos\ServicesPage.xbf
+HomePage\HomePage.xbf
 HomePage\HomePageBase.xbf
 LoginPage\LoginPage.xbf
 MainPage.xbf
+PacientesCitas\AppointmentsPage.xbf
+PacientesCitas\PatientsPage.xbf
+Settings\Settings.xbf
+Settings\SystemUserSettings.xbf
 Windows_ClinicaDental.xr.xml
 DatabaseQuerys\DB_Creator.sql
 Properties\Default.rd.xml

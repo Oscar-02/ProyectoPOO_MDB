@@ -39,6 +39,7 @@ namespace Windows_ClinicaDental.BeforeLogin
         public static async void checker()
         {
             Current.actualProcessInfo.Text = "Verificando si SQL Server se encuentra instalado";
+            await Task.Delay(1000);
             if (SQLServerCheck())
             {
                 Current.actualProcessInfo.Text = "Verificando integridad de conexion a SQL Server";
