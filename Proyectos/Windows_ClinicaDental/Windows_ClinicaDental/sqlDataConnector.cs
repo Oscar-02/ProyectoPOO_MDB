@@ -10,6 +10,9 @@ using Microsoft.SqlServer.Management.Common;
 using Microsoft.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using Windows.Storage;
+using Windows.Networking.BackgroundTransfer;
+using Windows.Foundation;
 
 namespace Windows_ClinicaDental
 {
@@ -64,28 +67,56 @@ namespace Windows_ClinicaDental
             else return (false,false);
         }
 
-        public static bool SSdbCreator()
+        public static async Task<bool> SSdbCreator()
         {
-            SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(sqlSettings, "master"));
-            try
+            StorageFile sqlQuery;
+            if (!File.Exists(ApplicationData.Current.LocalFolder.Path + @"\DB_Creator.sql"))
             {
-                cnn.Open();
-            }
-            catch (SqlException)
-            {
-                return false;
-            }
-            if (cnn.State == ConnectionState.Open)
-            {
-                string data = File.ReadAllText(Environment.CurrentDirectory + @"\DB_Creator.sql");
-                Server server = new Server(new ServerConnection(cnn));
-                server.ConnectionContext.ExecuteNonQuery(data);
-                return true;
+                sqlQuery = await ApplicationData.Current.LocalFolder.CreateFileAsync("DB_Creator.sql");
             }
             else
             {
+                sqlQuery = await ApplicationData.Current.LocalFolder.GetFileAsync("DB_Creator.sql");
+            }
+            try
+            {
+                Uri source = new Uri("https://raw.githubusercontent.com/Oscar-02/ProyectoPOO_MDB/master/Proyectos/Windows_ClinicaDental/Windows_ClinicaDental/DatabaseQuerys/DB_Creator.sql");
+                BackgroundDownloader downloader = new BackgroundDownloader();
+                DownloadOperation download = downloader.CreateDownload(source, sqlQuery);
+                await download.StartAsync();
+
+            }
+            catch (Exception)
+            {
                 return false;
             }
+            var getfFile = await ApplicationData.Current.LocalFolder.GetFilesAsync(Windows.Storage.Search.CommonFileQuery.OrderByName);
+            var foundfile = getfFile.FirstOrDefault(x => x.Name == "DB_Creator.sql");
+            if (foundfile != null)
+            {
+                SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(sqlSettings, "master"));
+                try
+                {
+                    cnn.Open();
+                }
+                catch (SqlException)
+                {
+                    return false;
+                }
+                if (cnn.State == ConnectionState.Open)
+                {
+                    StorageFile query = await ApplicationData.Current.LocalFolder.GetFileAsync("DB_Creator.sql");
+                    string data = await FileIO.ReadTextAsync(query);
+                    Server server = new Server(new ServerConnection(cnn));
+                    server.ConnectionContext.ExecuteNonQuery(data);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else { return false; }
         }
     }
 

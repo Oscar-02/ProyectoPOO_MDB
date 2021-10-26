@@ -86,7 +86,19 @@ CREATE TABLE Appointments
 END
 GO
 
-INSERT INTO [SystemUsers] (username, [password], Name, LastName, ID_Sex, DateBirth, ID_JobPosition, Adress, CellPhone, LandLinePhone, Role) VALUES
+INSERT INTO [Sex] (Sex) VALUES
+('M'), ('F')
+GO
+
+INSERT INTO [JobPosition] ([Position]) VALUES
+('TechnicalSupport')
+GO
+
+INSERT INTO [Roles] (Name, [Description]) VALUES
+('System Admin', 'Administrates all the application and database')
+GO
+
+INSERT INTO [SystemUsers] (username, password, Name, LastName, ID_Sex, DateBirth, ID_JobPosition, Adress, CellPhone, LandLinePhone, Role) VALUES
 ('admin', 
 '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918',
 'Administrator',

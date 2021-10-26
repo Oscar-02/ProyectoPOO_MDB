@@ -73,7 +73,9 @@ namespace Windows_ClinicaDental.BeforeLogin
                             }
                             else
                             {
-                                if (sqlDataConnector.SSdbCreator())
+                                Current.actualProcessInfo.Text = "Creando la base de datos. Por favor espere.";
+                                await Task.Delay(1000);
+                                if (await sqlDataConnector.SSdbCreator())
                                 {
                                     Current.actualProcessInfo.Text = "Verificando si existen las fuentes requeridas";
                                     await Task.Delay(1000);
