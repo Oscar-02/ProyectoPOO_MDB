@@ -151,10 +151,19 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="IsOpen" />
+      <RootProperty Name="Title" />
+      <RootProperty Name="Message" />
+      <RootProperty Name="ActionButton" />
     </RootType>
     <RootType FullName="Windows_ClinicaDental.MainPage" />
     <RootType FullName="Windows_ClinicaDental.PacientesCitas.AppointmentsPage" />
     <RootType FullName="Windows_ClinicaDental.PacientesCitas.PatientsPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
+      <RootProperty Name="Content" />
+      <RootProperty Name="NavigateUri" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Header" />
       <RootProperty Name="Items" />

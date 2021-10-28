@@ -11,15 +11,15 @@
 
     <StackPanel Orientation="Vertical" Margin="20" VerticalAlignment="Top" BorderBrush="Gray" BorderThickness="1"
                  CornerRadius="10" Background="{ThemeResource AppBarBackgroundThemeBrush}">
-        <StackPanel Orientation="Vertical" Margin="20">
+        <StackPanel Orientation="Vertical" Margin="20,20,20,10">
             <TextBlock Text="Configuracion de SQL Server" FontSize="30" FontWeight="SemiBold"/>
             <!--Seccion SQL Server-->
             <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
-                <ComboBox x:ConnectionId='6' x:Name="cnnServerMode" Header="Modo de conexion al servidor"                                                   Width="192">
+                <ComboBox x:ConnectionId='7' x:Name="cnnServerMode" Header="Modo de conexion al servidor"                                                   Width="192">
                     <x:String>Conexion Local</x:String>
                     <x:String>Conexion TCP/IP con puerto</x:String>
                 </ComboBox>
-                <TextBox x:ConnectionId='7' x:Name="cnnIPInfo" PlaceholderText="192.168.0.1; 127.0.0.1;" Margin="20,0,0,0" Width="192">
+                <TextBox x:ConnectionId='8' x:Name="cnnIPInfo" PlaceholderText="192.168.0.1; 127.0.0.1;" Margin="20,0,0,0" Width="192">
                     <TextBox.Header>
                         <StackPanel Orientation="Horizontal">
                             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xee77;" Margin="5,0,0,0"/>
@@ -27,7 +27,7 @@
                         </StackPanel>
                     </TextBox.Header>
                 </TextBox>
-                <TextBox x:ConnectionId='8' x:Name="cnnPortInfo" PlaceholderText="1433" Margin="20,0,0,0">
+                <TextBox x:ConnectionId='9' x:Name="cnnPortInfo" PlaceholderText="1433" Margin="20,0,0,0">
                     <TextBox.Header>
                         <StackPanel Orientation="Horizontal">
                             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe839;" VerticalAlignment="Center"/>
@@ -37,12 +37,12 @@
                 </TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
-                <ComboBox x:ConnectionId='3' x:Name="cnnLoginMode" Header="Modo de inicio de sesion"
+                <ComboBox x:ConnectionId='4' x:Name="cnnLoginMode" Header="Modo de inicio de sesion"
                                                                       >
                     <x:String>Autenticacion de Windows</x:String>
                     <x:String>Sesion de SQL Server</x:String>
                 </ComboBox>
-                <TextBox x:ConnectionId='4' x:Name="cnnSqlUser" PlaceholderText="sa; UserAccount" Margin="20,0,0,0" Width="192">
+                <TextBox x:ConnectionId='5' x:Name="cnnSqlUser" PlaceholderText="sa; UserAccount" Margin="20,0,0,0" Width="192">
                     <TextBox.Header>
                         <StackPanel Orientation="Horizontal">
                             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xf081;" Margin="5,0,0,0"/>
@@ -50,7 +50,7 @@
                         </StackPanel>
                     </TextBox.Header>
                 </TextBox>
-                <PasswordBox x:ConnectionId='5' x:Name="cnnSqlPwd" Margin="20,0,0,0" Width="192" PasswordRevealMode="Peek">
+                <PasswordBox x:ConnectionId='6' x:Name="cnnSqlPwd" Margin="20,0,0,0" Width="192" PasswordRevealMode="Peek">
                     <PasswordBox.Header>
                         <StackPanel Orientation="Horizontal">
                             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe72e;" Margin="5,0,0,0"/>
@@ -59,8 +59,8 @@
                     </PasswordBox.Header>
                 </PasswordBox>
             </StackPanel>
-            <Button x:ConnectionId='2' x:Name="cnnTest" Style="{StaticResource AccentButtonStyle}"
-                                      Margin="0,15">
+            <Button x:ConnectionId='3' x:Name="cnnTest" Style="{StaticResource AccentButtonStyle}"
+                                      Margin="0,15,0,0">
                 <Button.Content>
                     <StackPanel Orientation="Horizontal">
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe701;"/>
@@ -69,6 +69,15 @@
                 </Button.Content>
             </Button>
         </StackPanel>
+        <controls:InfoBar x:ConnectionId='2' x:Name="tcpInfoBar" Background="LightBlue" IsOpen="True"
+                          Title="Modo TCP/IP habilitado">
+            <controls:InfoBar.Message>
+                Si quieres usar tu PC como servidor "virtual" consulta el README.md desde el 
+            </controls:InfoBar.Message>
+            <controls:InfoBar.ActionButton>
+                <HyperlinkButton Content="Repositorio de Github" NavigateUri="https://github.com/Oscar-02/ProyectoPOO_MDB#sqlTcpRef"/>
+            </controls:InfoBar.ActionButton>
+        </controls:InfoBar>
     </StackPanel>
 </Page>
 

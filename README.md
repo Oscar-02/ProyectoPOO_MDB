@@ -1,14 +1,13 @@
 ![C#-Shield](https://img.shields.io/badge/Lenguaje-C%23-brightgreen.svg)
 ![SQL-Shield](https://img.shields.io/badge/Proveedor%20Base%20de%20Datos-SQL%20Server-red.svg)
 
-## Desarrolladores:
+## Desarrolladores:warning::
 Antes de abrir la aplicacion deberan seguir los pasos enlistados [aqui](#devsReq).
-UN LINK PARA MIENTRAS [AQUI](#sqlTcpRef)
 
-<br/><br/>
+<br/>
 
 # Clinica Dental
-### Proyecto para **Programacion Orientada a Objetos** (POO) y **Modelamiento de Bases de Datos** (MDB).
+ Proyecto para **Programacion Orientada a Objetos** (POO) y **Modelamiento de Bases de Datos** (MDB).
 <br />
 
 ## Integrantes
@@ -19,10 +18,26 @@ UN LINK PARA MIENTRAS [AQUI](#sqlTcpRef)
 - **PR210566** Mercedes Guadalupe Pérez Rivas
 - **VC200416** Francisco Armando Ventura Cortez
 
-<br />
+## Tabla de contenido
+
+### Seccion Principal
+
+### Seccion desarrolladores :computer:
+- [Requisitos para desarolladores](#devsReq)
+  - [Requisitos Iniciales](#initReq)
+  - [Paquetes Nuget](#nuget)
+  - [Requisitos Adicionales](#aditReq)
+- [Sql Server](#sqlServer)
+  - [Acceder a SQL Server por medio de tu computadora usando IP](#sqlTcpRef)
+
+<br/>
 
 <a name="devsReq"></a>
 # Requisitos para desarrolladores
+
+<a name="initReq"></a>
+## Requisitos iniciales
+
 Como este proyecto esta desarrollado bajo `Windows UI Library 2` (UI preparado para Windows 11) necesita que, antes de abrir la solucion del proyecto `Windows_ClinicaDental` se instalen los siguientes requisitos:
 
 | Requisito | Version Minima | Informacion adicional |
@@ -35,6 +50,7 @@ Como este proyecto esta desarrollado bajo `Windows UI Library 2` (UI preparado p
 
 <br/>
 
+<a name="nuget"></a>
 ## Paquetes Nuget
 
 A diferencia de `.NET Framework`, `.NET` no incluye ciertos paquetes / referencias (en ciertos casos) como `System.Data.Sqlclient`, elementos necesarios para que la solucion funcione al 100%. Estos elementos son llamados **Paquetes NuGet**. Ademas, aunque Visual Studio restaure estos paquetes en el momento de compilacion del proyecto, suele pasar que no se restauren completamente y muestre advertencias y/o errores de compilacion y la aplicacion no se habra depurado completamente. <br/> <br/>
@@ -56,6 +72,7 @@ Para evitar estos problemas, recomendamos instalarlos manualmente. Para instalar
 
 <br/>
 
+<a name="aditReq"></a>
 ## Requisitos Adicionales
 
 Tambien necesarios, la aplicacion necesita de estos requisitos para que funcione totalmente y sin errores detectados.
@@ -64,7 +81,7 @@ Tambien necesarios, la aplicacion necesita de estos requisitos para que funcione
 | Windows 10 - Windows 11 | Win10 v1809 comp. 17763 <br/> Win11 v21H1 comp. 22000 | Verifica si existen actualizaciones desde Windows Update |
 | SQL Server <strong>\*\*</strong> | Ultima version disponible | Ultima version de **SQL Server _Developer_** <strong>\*\*</strong> |
 
-(**) Solicitamos el uso de SQL Server _Developer_ debido a que la version _Express_ del mismo no es admite el servicio `Agente SQL Server`, servicio necesario para la ejecucion de esta aplicacion. Este servicio permite acceder por medio de la cadena de conexion al servidor en general.
+**(\*\*)**: Solicitamos el uso de SQL Server _Developer_ debido a que la version _Express_ del mismo no es admite el servicio `Agente SQL Server`, servicio necesario para la ejecucion de esta aplicacion. Este servicio permite acceder por medio de la cadena de conexion al servidor en general.
 
 
 <a name="sqlServer"></a>
@@ -73,6 +90,8 @@ Tambien necesarios, la aplicacion necesita de estos requisitos para que funcione
 <a name="sqlTcpRef"></a>
 ## Acceder a SQL Server por medio de tu computadora usando IP
 
+Aunque, de manera predeterminda, la aplicacion esta diseñada para conectarse de manera local directamente; puedes conectarte, tanto tu como otros dispositivos, a esta aplicacion y a su base de datos.
+<br/><br/>
 Si quieres usar tu PC como un servidor en tu red de area local (es decir, solamente conexion entre varios dispositivos de tu misma red) deberas habilitar ciertos elementos en tu router\* que permitiran el acceso a tu PC:
 
 1. Establecer la conexion WiFi - Ethernet con una IP dinamica. Deberas establecerla desde tu router usando la _direccion MAC de tu PC_\*\*.
