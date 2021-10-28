@@ -36,6 +36,7 @@ namespace Windows_ClinicaDental.Settings
             reader = new SettingsReader();
             cnnServerMode.SelectedIndex = reader.sqlPingMode == "local" ? 0 : 1;
             cnnLoginMode.SelectedIndex = reader.sqlLoginMode == "Windows" ? 0 : 1;
+            cnnLoginMode.Width = cnnServerMode.ActualWidth;
             cnnIPInfo.Text = reader.sqlPingServer;
             cnnIPInfo.Visibility = cnnServerMode.SelectedIndex == 0 ? Visibility.Collapsed : Visibility.Visible;
             cnnPortInfo.Text = reader.sqlPingPort;
@@ -52,6 +53,7 @@ namespace Windows_ClinicaDental.Settings
             cnnPortInfo.Text = String.Empty;
             cnnIPInfo.Visibility = cnnServerMode.SelectedIndex == 0 ? Visibility.Collapsed : Visibility.Visible;
             cnnPortInfo.Visibility = cnnIPInfo.Visibility;
+            cnnLoginMode.Width = cnnServerMode.ActualWidth;
         }
 
         private void cnnLoginMode_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -60,6 +62,7 @@ namespace Windows_ClinicaDental.Settings
             cnnSqlPwd.Password = String.Empty;
             cnnSqlUser.Visibility = cnnLoginMode.SelectedIndex == 0 ? Visibility.Collapsed : Visibility.Visible;
             cnnSqlPwd.Visibility = cnnSqlUser.Visibility;
+            cnnServerMode.Width = cnnLoginMode.ActualWidth;
         }
 
         private async void cnnTest_Click(object sender, RoutedEventArgs e)

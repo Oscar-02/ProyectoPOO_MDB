@@ -35,7 +35,9 @@
                         </StackPanel>
                     </TextBox.Header>
                 </TextBox>
-                <ComboBox x:Name="cnnLoginMode" Header="Modo de inicio de sesion" Margin="20,0,0,0"
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                <ComboBox x:Name="cnnLoginMode" Header="Modo de inicio de sesion"
                       SelectionChanged="cnnLoginMode_SelectionChanged">
                     <x:String>Autenticacion de Windows</x:String>
                     <x:String>Sesion de SQL Server</x:String>
