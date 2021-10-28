@@ -3,6 +3,7 @@
 
 ## Desarrolladores:
 Antes de abrir la aplicacion deberan seguir los pasos enlistados [aqui](#devsReq).
+UN LINK PARA MIENTRAS [AQUI](#sqlTcpRef)
 
 <br/><br/>
 
