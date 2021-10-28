@@ -66,8 +66,10 @@ Tambien necesarios, la aplicacion necesita de estos requisitos para que funcione
 (**) Solicitamos el uso de SQL Server _Developer_ debido a que la version _Express_ del mismo no es admite el servicio `Agente SQL Server`, servicio necesario para la ejecucion de esta aplicacion. Este servicio permite acceder por medio de la cadena de conexion al servidor en general.
 
 
+<a name="sqlServer"></a>
 # SQL Server
 
+<a name="sqlTcpRef"></a>
 ## Acceder a SQL Server por medio de tu computadora usando IP
 
 Si quieres usar tu PC como un servidor en tu red de area local (es decir, solamente conexion entre varios dispositivos de tu misma red) deberas habilitar ciertos elementos en tu router\* que permitiran el acceso a tu PC:
