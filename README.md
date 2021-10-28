@@ -1,7 +1,8 @@
 ![C#-Shield](https://img.shields.io/badge/Lenguaje-C%23-brightgreen.svg)
 ![SQL-Shield](https://img.shields.io/badge/Proveedor%20Base%20de%20Datos-SQL%20Server-red.svg)
 
-### **SI ERES UN DESARROLLADOR Y DESEAS EJECUTAR ESTA APLICACION, NECESITAS LEER LA SECCION _"Requisitos para desarrolladores"_**
+## Desarrolladores:
+Antes de abrir la aplicacion deberan seguir los pasos enlistados [aqui](#devsReq).
 
 <br/><br/>
 
@@ -19,6 +20,7 @@
 
 <br />
 
+<a name="devsReq"></a>
 # Requisitos para desarrolladores
 Como este proyecto esta desarrollado bajo `Windows UI Library 2` (UI preparado para Windows 11) necesita que, antes de abrir la solucion del proyecto `Windows_ClinicaDental` se instalen los siguientes requisitos:
 
@@ -59,4 +61,21 @@ Tambien necesarios, la aplicacion necesita de estos requisitos para que funcione
 | Requisito | Version Minima | Mas Informacion|
 | :- | :-: | -: |
 | Windows 10 - Windows 11 | Win10 v1809 comp. 17763 <br/> Win11 v21H1 comp. 22000 | Verifica si existen actualizaciones desde Windows Update |
-| SQL Server | Ultima version disponible | Recomendamos usar **SQL Server Developer** para el funcionamiento de esta aplicacion, aunque seguimos probando si _SQL Server Express_ es compatible con el entorno de trabajo |
+| SQL Server <strong>\*\*</strong> | Ultima version disponible | Ultima version de **SQL Server _Developer_** <strong>\*\*</strong> |
+
+(**) Solicitamos el uso de SQL Server _Developer_ debido a que la version _Express_ del mismo no es admite el servicio `Agente SQL Server`, servicio necesario para la ejecucion de esta aplicacion. Este servicio permite acceder por medio de la cadena de conexion al servidor en general.
+
+
+# SQL Server
+
+## Acceder a SQL Server por medio de tu computadora usando IP
+
+Si quieres usar tu PC como un servidor en tu red de area local (es decir, solamente conexion entre varios dispositivos de tu misma red) deberas habilitar ciertos elementos en tu router\* que permitiran el acceso a tu PC:
+
+1. Establecer la conexion WiFi - Ethernet con una IP dinamica. Deberas establecerla desde tu router usando la _direccion MAC de tu PC_\*\*.
+2. Si tu router\* tiene la habilidad de usar servidores virtuales, deberas crear un servidor virtual con la direccion IP dinamica de tu dispositivo.
+3. Abrir los _puertos TCP_\*\*\* correspondientes de SQL Server en tu router\*. De manera predeterminada, el puerto es `1433` (tanto de entrada como de salida).
+
+**(\*)**: Los pasos pueden depender de las marcas y modelos de router.<br/>
+**(\*\*)**: Puedes obtener la direccion MAC por medio del `Simbolo del Sistema`, escribiendo el comando `ipconfig /all` y finalmente buscar el dispositivo a utilizar.<br/>
+***(\*\*\*)***: Si abriste los puertos y aun no puedes conectarte, pueda que necesites tambien abrir los puertos TCP desde el `Firewall de Windows con Seguridad Avanzada`.

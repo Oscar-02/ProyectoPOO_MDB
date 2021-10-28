@@ -29,6 +29,7 @@ namespace Windows_ClinicaDental.Settings
     /// </summary>
     public sealed partial class Settings : Page
     {
+        //ARREGLAR LA PUTA PAGINA QUE SE JODIO
         public static SettingsReader reader;
         public Settings()
         {
@@ -36,11 +37,11 @@ namespace Windows_ClinicaDental.Settings
             reader = new SettingsReader();
             cnnServerMode.SelectedIndex = reader.sqlPingMode == "local" ? 0 : 1;
             cnnLoginMode.SelectedIndex = reader.sqlLoginMode == "Windows" ? 0 : 1;
-            cnnLoginMode.Width = cnnServerMode.ActualWidth;
             cnnIPInfo.Text = reader.sqlPingServer;
             cnnIPInfo.Visibility = cnnServerMode.SelectedIndex == 0 ? Visibility.Collapsed : Visibility.Visible;
             cnnPortInfo.Text = reader.sqlPingPort;
             cnnPortInfo.Visibility = cnnIPInfo.Visibility;
+            //tcpInformation.IsOpen = cnnIPInfo.Visibility == Visibility.Visible ? true : false;
             cnnSqlUser.Text = reader.sqlUser;
             cnnSqlPwd.Password = reader.sqlPwd;
             cnnSqlUser.Visibility = cnnLoginMode.SelectedIndex == 0 ? Visibility.Collapsed : Visibility.Visible;
@@ -51,9 +52,8 @@ namespace Windows_ClinicaDental.Settings
         {
             cnnIPInfo.Text = String.Empty;
             cnnPortInfo.Text = String.Empty;
-            cnnIPInfo.Visibility = cnnServerMode.SelectedIndex == 0 ? Visibility.Collapsed : Visibility.Visible;
             cnnPortInfo.Visibility = cnnIPInfo.Visibility;
-            cnnLoginMode.Width = cnnServerMode.ActualWidth;
+            //tcpInformation.IsOpen = cnnIPInfo.Visibility == Visibility.Visible ? true : false;
         }
 
         private void cnnLoginMode_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -62,7 +62,7 @@ namespace Windows_ClinicaDental.Settings
             cnnSqlPwd.Password = String.Empty;
             cnnSqlUser.Visibility = cnnLoginMode.SelectedIndex == 0 ? Visibility.Collapsed : Visibility.Visible;
             cnnSqlPwd.Visibility = cnnSqlUser.Visibility;
-            cnnServerMode.Width = cnnLoginMode.ActualWidth;
+            //tcpInformation.IsOpen = cnnIPInfo.Visibility == Visibility.Visible ? true : false;
         }
 
         private async void cnnTest_Click(object sender, RoutedEventArgs e)

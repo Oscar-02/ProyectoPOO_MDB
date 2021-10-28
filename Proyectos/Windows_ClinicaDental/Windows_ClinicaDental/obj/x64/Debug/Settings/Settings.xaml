@@ -10,12 +10,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel Orientation="Vertical" Margin="20" VerticalAlignment="Top" BorderBrush="Gray" BorderThickness="1"
-                Background="{ThemeResource AppBarBackgroundThemeBrush}" CornerRadius="10">
+                 CornerRadius="10" Background="{ThemeResource AppBarBackgroundThemeBrush}">
         <StackPanel Orientation="Vertical" Margin="20">
             <TextBlock Text="Configuracion de SQL Server" FontSize="30" FontWeight="SemiBold"/>
             <!--Seccion SQL Server-->
             <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
-                <ComboBox x:ConnectionId='6' x:Name="cnnServerMode" Header="Modo de conexion al servidor"                                                  >
+                <ComboBox x:ConnectionId='6' x:Name="cnnServerMode" Header="Modo de conexion al servidor"                                                   Width="192">
                     <x:String>Conexion Local</x:String>
                     <x:String>Conexion TCP/IP con puerto</x:String>
                 </ComboBox>
@@ -50,7 +50,7 @@
                         </StackPanel>
                     </TextBox.Header>
                 </TextBox>
-                <PasswordBox x:ConnectionId='5' x:Name="cnnSqlPwd" Margin="20,0,0,0" Width="192" IsPasswordRevealButtonEnabled="True">
+                <PasswordBox x:ConnectionId='5' x:Name="cnnSqlPwd" Margin="20,0,0,0" Width="192" PasswordRevealMode="Peek">
                     <PasswordBox.Header>
                         <StackPanel Orientation="Horizontal">
                             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe72e;" Margin="5,0,0,0"/>

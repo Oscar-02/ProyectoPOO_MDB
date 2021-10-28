@@ -116,7 +116,6 @@ C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDen
 C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\System.Security.Permissions.dll
 C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\System.Text.Encodings.Web.dll
 C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\System.Text.Json.dll
-C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\obj\x64\Debug\Windows_ClinicaDental.csproj.AssemblyReference.cache
 C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\obj\x64\Debug\ResourceHandlingTask.state
 C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\obj\x64\Debug\Microsoft.SqlServer.Assessment\en-US\Microsoft.SqlServer.Management.Assessment.Properties.Resources.resw
 C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\obj\x64\Debug\Microsoft.SqlServer.ConnectionInfo\en-US\Microsoft.SqlServer.Management.Common.StringConnectionInfo.resw
@@ -222,3 +221,4 @@ C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDen
 C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\obj\x64\Debug\PacientesCitas\PatientsPage.xbf
 C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\obj\x64\Debug\Settings\Settings.xbf
 C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\obj\x64\Debug\Settings\SystemUserSettings.xbf
+C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\obj\x64\Debug\Windows_ClinicaDental.csproj.AssemblyReference.cache
