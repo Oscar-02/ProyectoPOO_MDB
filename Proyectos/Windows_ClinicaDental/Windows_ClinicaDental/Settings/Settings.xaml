@@ -69,8 +69,8 @@
                 </Button.Content>
             </Button>
         </StackPanel>
-        <controls:InfoBar x:Name="tcpInfoBar" Background="LightBlue" IsOpen="True"
-                          Title="Modo TCP/IP habilitado">
+        <controls:InfoBar x:Name="tcpInfoBar" IsOpen="True"
+                          Title="Modo TCP/IP habilitado" CornerRadius="0">
             <controls:InfoBar.Message>
                 Si quieres usar tu PC como servidor "virtual" consulta el README.md desde el 
             </controls:InfoBar.Message>
