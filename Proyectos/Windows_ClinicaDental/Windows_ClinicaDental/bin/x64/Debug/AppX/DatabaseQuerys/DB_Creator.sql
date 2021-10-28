@@ -52,7 +52,7 @@ CREATE TABLE SystemUsers
   ID_Sex INT NOT NULL FOREIGN KEY REFERENCES [Sex](id),
   DateBirth DATE NOT NULL,
   ID_JobPosition INT NOT NULL FOREIGN KEY REFERENCES [JobPosition](id),
-  Adress VARCHAR(MAX) NOT NULL,
+  Address VARCHAR(MAX) NOT NULL,
   CellPhone VARCHAR(16) NOT NULL,
   LandLinePhone VARCHAR(16) NOT NULL,
   Role INT NOT NULL FOREIGN KEY REFERENCES [Roles](id)
@@ -67,7 +67,7 @@ CREATE TABLE Patients
   LastName VARCHAR(70) NOT NULL,
   ID_Sex INT NOT NULL FOREIGN KEY REFERENCES [Sex](id),
   DateBirth DATE NOT NULL,
-  Adress VARCHAR(MAX) NOT NULL,
+  Address VARCHAR(MAX) NOT NULL,
   CellPhone VARCHAR(16) NOT NULL,
   LandLinePhone VARCHAR(16) NOT NULL,
   ID_Treatments INT NOT NULL FOREIGN KEY REFERENCES [Treatments](id),
@@ -86,7 +86,19 @@ CREATE TABLE Appointments
 END
 GO
 
-INSERT INTO [SystemUsers] (username, [password], Name, LastName, ID_Sex, DateBirth, ID_JobPosition, Adress, CellPhone, LandLinePhone, Role) VALUES
+INSERT INTO [Sex] (Sex) VALUES
+('M'), ('F')
+GO
+
+INSERT INTO [JobPosition] ([Position]) VALUES
+('TechnicalSupport')
+GO
+
+INSERT INTO [Roles] (Name, [Description]) VALUES
+('System Admin', 'Administrates all the application and database')
+GO
+
+INSERT INTO [SystemUsers] (username, password, Name, LastName, ID_Sex, DateBirth, ID_JobPosition, Address, CellPhone, LandLinePhone, Role) VALUES
 ('admin', 
 '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918',
 'Administrator',

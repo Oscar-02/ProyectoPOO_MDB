@@ -203,4 +203,156 @@ namespace Windows_ClinicaDental
         }
         
     }
+
+    public class sqlSystemUsers
+    {
+        #region sqlSysUsersVar
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Name { get; set; }
+        public string LastName { get; set; }
+        public int ID_Sex { get; set; }
+        public DateTime DateBirth { get; set; }
+        public int ID_JobPosition { get; set; }
+        public string Address { get; set; }
+        public string Cellphone { get; set; }
+        public string LandLinePhone { get; set; }
+        public int Role { get; set; }
+        #endregion
+
+        public static (bool,List<sqlSystemUsers>) GetTable() //Obtiene los datos de la tabla SystemUsers
+        {
+            List<sqlSystemUsers> sysUsersList = new List<sqlSystemUsers>();
+            SettingsReader settings = new SettingsReader();
+            SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(settings, "ClinicaDental"));
+            try
+            {
+                cnn.Open();
+            }
+            catch (SqlException)
+            {
+                return (false, null);
+            }
+            if (cnn.State == ConnectionState.Open)
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [SystemUsers]", cnn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    sqlSystemUsers data = new sqlSystemUsers();
+                    data.Username = reader["username"].ToString();
+                    data.Password = reader["password"].ToString();
+                    data.Name = reader["Name"].ToString();
+                    data.LastName = reader["LastName"].ToString();
+                    data.ID_Sex = int.Parse(reader["ID_Sex"].ToString());
+                    data.DateBirth = reader.GetDateTime(6);
+                    data.ID_JobPosition = int.Parse(reader["ID_JobPosition"].ToString());//INT
+                    data.Address = reader["Address"].ToString();
+                    data.Cellphone = reader["CellPhone"].ToString();//FORMAT
+                    data.LandLinePhone = reader["LandLinePhone"].ToString();//FORMAT
+                    data.Role = int.Parse(reader["Role"].ToString());//INT
+                    sysUsersList.Add(data);
+                }
+                reader.Close();
+                cnn.Close();
+                if (sysUsersList.Count > 0)
+                {
+                    return (true, sysUsersList);
+                }
+                else return (false, null);
+            }
+            else return (false, null);
+        }
+    }
+
+    public class sqlRoles
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+
+        public static (bool, List<sqlRoles>) GetTable()
+        {
+            List<sqlRoles> listRoles = new List<sqlRoles>();
+            SettingsReader settings = new SettingsReader();
+            SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(settings, "ClinicaDental"));
+            try
+            {
+                cnn.Open();
+            }
+            catch (SqlException) 
+            {
+                return (false, null);
+            }
+            if (cnn.State == ConnectionState.Open)
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [Roles]", cnn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    sqlRoles role = new sqlRoles()
+                    {
+                        ID = int.Parse(reader["id"].ToString()),
+                        Name = reader["Name"].ToString(),
+                        Description = reader["Description"].ToString()
+                    };
+                    listRoles.Add(role);
+                }
+                reader.Close();
+                cnn.Close();
+                if (listRoles.Count > 0)
+                {
+                    return (true, listRoles);
+                }
+                else
+                {
+                    return (false, null);
+                }
+            }
+            else
+            {
+                return (false, null);
+            }
+        }
+    }
+
+    public class sqlJobPosition
+    {
+        public int ID { get; set; }
+        public string Position { get; set; }
+
+        public static (bool, List<sqlJobPosition>) GetTable()
+        {
+            List<sqlJobPosition> listPosition = new List<sqlJobPosition>();
+            SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(new SettingsReader(), "ClinicaDental"));
+            try
+            {
+                cnn.Open();
+            }
+            catch
+            {
+                return (false, null);
+            }
+            if (cnn.State == ConnectionState.Open)
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [JobPosition]", cnn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    sqlJobPosition position = new sqlJobPosition()
+                    {
+                        ID = int.Parse(reader["id"].ToString()),
+                        Position = reader["Position"].ToString()
+                    };
+                    listPosition.Add(position);
+                }
+                if (listPosition.Count > 0)
+                {
+                    return(true, listPosition);
+                }
+                else return(false, null);
+            }
+            else return (false, null);
+        }
+    }
 }

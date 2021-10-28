@@ -22,7 +22,7 @@ namespace Windows_ClinicaDental.LoginPage
     /// </summary>
     public sealed partial class LoginPage : Page
     {
-        public static sqlLoginUser current;
+        public static sqlLoginUser currentUser;
         public LoginPage()
         {
             this.InitializeComponent();
@@ -67,11 +67,11 @@ namespace Windows_ClinicaDental.LoginPage
                     switch (message)
                     {
                         case -1:
-                            current = userGet;
+                            currentUser = userGet;
                             MainPage.Current.content.Navigate(typeof(HomePage.HomePageBase));
                             info = new infoBar()
                             {
-                                Title = "Bienvenido, " + current.Name + " " + current.LastName,
+                                Title = "Bienvenido, " + currentUser.Name + " " + currentUser.LastName,
                                 Message = "Has iniciado sesion correctamente.",
                                 Severity = Microsoft.UI.Xaml.Controls.InfoBarSeverity.Success
                             };
