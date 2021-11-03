@@ -12,7 +12,7 @@ Use [ClinicaDental]
 CREATE TABLE Sex
 (
   id INT PRIMARY KEY IDENTITY(1,1),
-  Sex CHAR(1) NOT NULL
+  Sex VARCHAR(9) NOT NULL
 )
 
 CREATE TABLE JobPosition
@@ -88,7 +88,7 @@ GO
 
 --CREATE ADMIN PRIVILEGES USER
 INSERT INTO [Sex] (Sex) VALUES
-('M'), ('F')
+('Masculino'), ('Femenino')
 GO
 
 INSERT INTO [JobPosition] ([Position]) VALUES

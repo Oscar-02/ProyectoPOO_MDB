@@ -355,4 +355,44 @@ namespace Windows_ClinicaDental
             else return (false, null);
         }
     }
+
+    public class sqlSex
+    {
+        public int ID { get; set; }
+        public string Sex { get; set; }
+
+        public static (bool, List<sqlSex>) GetTable()
+        {
+            List<sqlSex> listSex = new List<sqlSex>();
+            SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(new SettingsReader(), "ClinicaDental"));
+            try
+            {
+                cnn.Open();
+            }
+            catch
+            {
+                return (false, null);
+            }
+            if (cnn.State == ConnectionState.Open)
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [Sex]", cnn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    sqlSex sex = new sqlSex()
+                    {
+                        ID = int.Parse(reader["id"].ToString()),
+                        Sex = reader["Sex"].ToString()
+                    };
+                    listSex.Add(sex);
+                }
+                if (listSex.Count > 0)
+                {
+                    return (true, listSex);
+                }
+                else return (false, null);
+            }
+            else return (false, null);
+        }
+    }
 }

@@ -56,6 +56,7 @@ LoginPage\LoginPage.xbf
 MainPage.xbf
 PacientesCitas\AppointmentsPage.xbf
 PacientesCitas\PatientsPage.xbf
+Settings\Diags\SysAdmin.xbf
 Settings\Settings.xbf
 Settings\SystemUserSettings.xbf
 Windows_ClinicaDental.xr.xml

@@ -10,7 +10,7 @@ Antes de abrir la aplicacion deberan seguir los pasos enlistados [aqui](#devsReq
  Proyecto para **Programacion Orientada a Objetos** (POO) y **Modelamiento de Bases de Datos** (MDB).
 <br />
 
-## Integrantes
+### Integrantes
 - **CD210488** Jairo Rafael Colocho Díaz
 - **AE210567** Bryan Josué Alberto Elena
 - **CV210468** Oscar Rolando Cañas Valdizón

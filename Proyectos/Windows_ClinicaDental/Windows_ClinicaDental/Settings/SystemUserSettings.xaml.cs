@@ -28,6 +28,8 @@ namespace Windows_ClinicaDental.Settings
         {
             this.InitializeComponent();
             Current = this;
+            this.Height = Double.NaN;
+            #region PageLoaders
             scrollView.Height = Window.Current.CoreWindow.Bounds.Height;
             Window.Current.CoreWindow.SizeChanged += (sender, args) => scrollView.Height = Window.Current.CoreWindow.Bounds.Height;
             SystemUsers.GetSystemUsersList();
@@ -36,6 +38,42 @@ namespace Windows_ClinicaDental.Settings
             sysUsersList.ItemsSource = listSysUsers;
             JobPositionsList.ItemsSource = listJobPositions;
             RolesList.ItemsSource = listRoles;
+            #endregion
+            #region ButtonsDiagLoader
+            addSU.Click += async (sender, args) =>
+            {
+                Diags.ItemSender data = new Diags.ItemSender(null, false);
+                ContentDialog diag = new Diags.SysAdmin();
+                _ = await diag.ShowAsync();
+            };
+            modifySU.Click += async (sender, args) =>
+            {
+                var selected = sysUsersList.SelectedItem as SystemUsers;
+                (_, var usersList) = sqlSystemUsers.GetTable();
+                foreach (var element in usersList)
+                {
+                    if (element.Name == selected.Name)
+                    {
+                        Diags.ItemSender data = new Diags.ItemSender(element, true);
+                    }
+                }
+                ContentDialog diag = new Diags.SysAdmin();
+                _ = await diag.ShowAsync();
+            };
+            #endregion
+        }
+        private void sysUsersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sysUsersList.SelectedIndex != -1)
+            {
+                modifySU.IsEnabled = true;
+                deleteSU.IsEnabled = true;
+            }
+            else
+            {
+                modifySU.IsEnabled = false; 
+                deleteSU.IsEnabled = false;
+            }
         }
 
         public static List<SystemUsers> listSysUsers = new List<SystemUsers>();
@@ -73,7 +111,6 @@ namespace Windows_ClinicaDental.Settings
                 }
             }
         }
-
         public class JobPositions
         {
             public string Position { get; set; }
@@ -93,7 +130,6 @@ namespace Windows_ClinicaDental.Settings
                 }
             }
         }
-
         public class Roles
         {
             public string Name { set; get; }
@@ -111,5 +147,6 @@ namespace Windows_ClinicaDental.Settings
                 }
             }
         }
+
     }
 }
