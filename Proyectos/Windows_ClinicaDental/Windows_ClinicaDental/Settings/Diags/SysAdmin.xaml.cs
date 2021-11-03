@@ -165,14 +165,14 @@ namespace Windows_ClinicaDental.Settings.Diags
                         }
                         cmd.Parameters.AddWithValue("@name", Name.Text);
                         cmd.Parameters.AddWithValue("@lastname", LastName.Text);
-                        cmd.Parameters.AddWithValue("@sex", Sex.SelectedItem as string);
+                        foreach (var items in sex) if (items.Sex == Sex.SelectedItem as string) cmd.Parameters.AddWithValue("@sex", items.ID);
                         cmd.Parameters.Add("@datebirth", SqlDbType.Date);
-                        cmd.Parameters["@datebirth"].Value = DateBirth.Date;
-                        cmd.Parameters.AddWithValue("@jobposition", JobPosition.SelectedItem as string);
+                        cmd.Parameters["@datebirth"].Value = DateBirth.Date.Value.DateTime;
+                        foreach (var items in job) if (items.Position == JobPosition.SelectedItem as string) cmd.Parameters.AddWithValue("@jobposition", items.ID);
                         cmd.Parameters.AddWithValue("@address", Address.Text);
                         cmd.Parameters.AddWithValue("@cellphone", CellPhone.Text);
                         cmd.Parameters.AddWithValue("@landlinephone", LandLinePhone.Text);
-                        cmd.Parameters.AddWithValue("@role", Role.SelectedItem as string);
+                        foreach (var items in role) if (items.Name == Role.SelectedItem as string) cmd.Parameters.AddWithValue("@role", items.ID);
                         cmd.ExecuteNonQuery();
                     }
                 }
