@@ -150,6 +150,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsReader.cs" />
     <Compile Include="Settings\Diags\ItemSender.cs" />
+    <Compile Include="Settings\Diags\JobPositions.xaml.cs">
+      <DependentUpon>JobPositions.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Settings\Diags\SysAdmin.xaml.cs">
       <DependentUpon>SysAdmin.xaml</DependentUpon>
     </Compile>
@@ -260,6 +263,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PacientesCitas\PatientsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Settings\Diags\JobPositions.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

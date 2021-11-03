@@ -174,6 +174,7 @@ namespace Windows_ClinicaDental.Settings.Diags
                         cmd.Parameters.AddWithValue("@landlinephone", LandLinePhone.Text);
                         foreach (var items in role) if (items.Name == Role.SelectedItem as string) cmd.Parameters.AddWithValue("@role", items.ID);
                         cmd.ExecuteNonQuery();
+                        HomePage.HomePageBase.Current.main.Navigate(typeof(SystemUserSettings)); 
                     }
                 }
             }
