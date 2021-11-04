@@ -56,6 +56,8 @@ LoginPage\LoginPage.xbf
 MainPage.xbf
 PacientesCitas\AppointmentsPage.xbf
 PacientesCitas\PatientsPage.xbf
+Settings\Diags\JobPositions.xbf
+Settings\Diags\Roles.xbf
 Settings\Diags\SysAdmin.xbf
 Settings\Settings.xbf
 Settings\SystemUserSettings.xbf

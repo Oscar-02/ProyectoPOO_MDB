@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+//Extra Libraries
+using Microsoft.Data.SqlClient;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -40,6 +42,7 @@ namespace Windows_ClinicaDental.Settings
             RolesList.ItemsSource = listRoles;
             #endregion
             #region ButtonsDiagLoader
+            //SU SECTION
             addSU.Click += async (sender, args) =>
             {
                 Diags.ItemSender data = new Diags.ItemSender(null, false);
@@ -48,17 +51,183 @@ namespace Windows_ClinicaDental.Settings
             };
             modifySU.Click += async (sender, args) =>
             {
-                var selected = sysUsersList.SelectedItem as SystemUsers;
-                (_, var usersList) = sqlSystemUsers.GetTable();
-                foreach (var element in usersList)
+                var delete = sysUsersList.SelectedItem as SystemUsers;
+                if (delete.Name == LoginPage.LoginPage.currentUser.Name)
                 {
-                    if (element.Name == selected.Name)
+                    infoBar errorBar = new infoBar()
                     {
-                        Diags.ItemSender data = new Diags.ItemSender(element, true);
+                        Severity = Microsoft.UI.Xaml.Controls.InfoBarSeverity.Error,
+                        Title = "Ocurrio un error al modificar el usuario",
+                        Message = "No puedes modificar al usuario con el cual has iniciado sesion."
+                    };
+                    infoBar.CreateInfoBar(errorBar);
+                }
+                else
+                {
+                    var selected = sysUsersList.SelectedItem as SystemUsers;
+                    (_, var usersList) = sqlSystemUsers.GetTable();
+                    foreach (var element in usersList)
+                    {
+                        if (element.Name == selected.Name)
+                        {
+                            Diags.ItemSender data = new Diags.ItemSender(element, true);
+                        }
+                    }
+                    ContentDialog diag = new Diags.SysAdmin();
+                    _ = await diag.ShowAsync();
+                }
+            };
+            deleteSU.Click += async (sender, args) =>
+            {
+                var delete = sysUsersList.SelectedItem as SystemUsers;
+                if (delete.Name == LoginPage.LoginPage.currentUser.Name)
+                {
+                    infoBar errorBar = new infoBar()
+                    {
+                        Severity = Microsoft.UI.Xaml.Controls.InfoBarSeverity.Error,
+                        Title = "Ocurrio un error al eliminar el usuario",
+                        Message = "No puedes eliminar al usuario con el cual has iniciado sesion."
+                    };
+                    infoBar.CreateInfoBar(errorBar);
+                }
+                else
+                {
+                    ContentDiag diag = new ContentDiag()
+                    {
+                        Title = "Eliminar usuario del sistema",
+                        Content = "¿Estas seguro que quieres eliminar a este usuario?\n" +
+                    "Esta accion no se puede deshacer una vez eliminado.",
+                        PrimBtnEnable = true,
+                        SecBtnEnable = false,
+                        PrimBtnText = "Eliminar",
+                        CloseBtnText = "Cancelar",
+                        DefaultBtn = 0
+                    };
+                    var result = await ContentDiag.DiagOpen(diag);
+                    if (result == ContentDialogResult.Primary)
+                    {
+                        SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(new SettingsReader(), "ClinicaDental"));
+                        cnn.Open();
+                        string cmdStr = "IF EXISTS (SELECT * FROM [SystemUsers] WHERE [Name] = @name)\n" +
+                        "DELETE FROM [SystemUsers] WHERE [Name] = @name";
+                        SqlCommand cmd = new SqlCommand(cmdStr, cnn);
+                        cmd.Parameters.AddWithValue("@name", delete.Name);
+                        cmd.ExecuteNonQuery();
+                        HomePage.HomePageBase.Current.main.Navigate(typeof(SystemUserSettings));
                     }
                 }
-                ContentDialog diag = new Diags.SysAdmin();
+            };
+            //PL SECTION
+            addPL.Click += async (sender, args) =>
+            {
+                ContentDialog diag = new Diags.JobPositions();
                 _ = await diag.ShowAsync();
+            };
+            deletePL.Click += async (sender, args) =>
+            {
+                var delete = JobPositionsList.SelectedItem as JobPositions;
+                string position = "";
+                (_, var jobList) = sqlJobPosition.GetTable();
+                foreach (var element in jobList)
+                {
+                    if (element.ID == LoginPage.LoginPage.currentUser.JobPosition)
+                    {
+                        position = element.Position;
+                    }
+                }
+                if (delete.Position == position)
+                {
+                    infoBar errorBar = new infoBar()
+                    {
+                        Severity = Microsoft.UI.Xaml.Controls.InfoBarSeverity.Error,
+                        Title = "Ocurrio un error al eliminar la posicion laboral",
+                        Message = "No puedes eliminar la posicion laboral del usuario el cual has iniciado sesion."
+                    };
+                    infoBar.CreateInfoBar(errorBar);
+                }
+                else
+                {
+                    ContentDiag diag = new ContentDiag()
+                    {
+                        Title = "Eliminar posicion laboral",
+                        Content = "¿Estas seguro que quieres eliminar esta posicion laboral?\n" +
+                    char.ConvertFromUtf32(0x1F6D1) + " PRECAUCION: Esta accion eliminara tambien a los usuarios ligados a ella.\n" +
+                    "Una vez finalizado, esta accion no se podra deshacer.",
+                        PrimBtnEnable = true,
+                        SecBtnEnable = false,
+                        PrimBtnText = "Eliminar",
+                        CloseBtnText = "Cancelar",
+                        DefaultBtn = 0
+                    };
+                    var result = await ContentDiag.DiagOpen(diag);
+                    if (result == ContentDialogResult.Primary)
+                    {
+                        SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(new SettingsReader(), "ClinicaDental"));
+                        cnn.Open();
+                        string cmdStr = "IF EXISTS (SELECT * FROM [JobPosition] WHERE Position = @position)\n" +
+                        "DELETE FROM [JobPosition] WHERE Position = @position";
+                        SqlCommand cmd = new SqlCommand(cmdStr, cnn);
+                        cmd.Parameters.AddWithValue("@position", delete.Position);
+                        cmd.ExecuteNonQuery();
+                        HomePage.HomePageBase.Current.main.Navigate(typeof(SystemUserSettings));
+                    }
+                }
+            };
+            //R SECTION
+            addR.Click += async (sender, args) =>
+            {
+                ContentDialog diag = new Diags.Roles();
+                _ = await diag.ShowAsync();
+            };
+            deleteR.Click += async (sender, args) =>
+            {
+                var delete = RolesList.SelectedItem as Roles;
+                string name = "";
+                (_, var roleList) = sqlRoles.GetTable();
+                foreach (var element in roleList)
+                {
+                    if (element.ID == LoginPage.LoginPage.currentUser.JobPosition)
+                    {
+                        name = element.Name;
+                    }
+                }
+                if (delete.Name == name)
+                {
+                    infoBar errorBar = new infoBar()
+                    {
+                        Severity = Microsoft.UI.Xaml.Controls.InfoBarSeverity.Error,
+                        Title = "Ocurrio un error al eliminar el rol",
+                        Message = "No puedes eliminar el rol del usuario el cual has iniciado sesion."
+                    };
+                    infoBar.CreateInfoBar(errorBar);
+                }
+                else
+                {
+                    ContentDiag diag = new ContentDiag()
+                    {
+                        Title = "Eliminar rol",
+                        Content = "¿Estas seguro que quieres eliminar este rol?\n" +
+                    char.ConvertFromUtf32(0x1F6D1) + " PRECAUCION: Esta accion eliminara tambien a los usuarios ligados a el.\n" +
+                    "Una vez finalizado, esta accion no se podra deshacer.",
+                        PrimBtnEnable = true,
+                        SecBtnEnable = false,
+                        PrimBtnText = "Eliminar",
+                        CloseBtnText = "Cancelar",
+                        DefaultBtn = 0
+                    };
+                    var result = await ContentDiag.DiagOpen(diag);
+                    if (result == ContentDialogResult.Primary)
+                    {
+                        SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(new SettingsReader(), "ClinicaDental"));
+                        cnn.Open();
+                        string cmdStr = "IF EXISTS (SELECT * FROM [Roles] WHERE Name = @name)\n" +
+                        "DELETE FROM [Roles] WHERE Name = @name";
+                        SqlCommand cmd = new SqlCommand(cmdStr, cnn);
+                        cmd.Parameters.AddWithValue("@name", delete.Name);
+                        cmd.ExecuteNonQuery();
+                        HomePage.HomePageBase.Current.main.Navigate(typeof(SystemUserSettings));
+                    }
+                }
             };
             #endregion
         }
@@ -73,6 +242,30 @@ namespace Windows_ClinicaDental.Settings
             {
                 modifySU.IsEnabled = false; 
                 deleteSU.IsEnabled = false;
+            }
+        }
+
+        private void JobPositionsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (JobPositionsList.SelectedIndex != -1)
+            {
+                deletePL.IsEnabled = true;
+            }
+            else
+            {
+                deletePL.IsEnabled = false;
+            }
+        }
+
+        private void RolesList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (RolesList.SelectedIndex != -1)
+            {
+                deleteR.IsEnabled = true;
+            }
+            else
+            {
+                deleteR.IsEnabled = false;
             }
         }
 

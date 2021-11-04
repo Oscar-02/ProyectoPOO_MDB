@@ -44,7 +44,12 @@ namespace Windows_ClinicaDental.Settings.Diags
                 cnn.Open();
                 if (cnn.State == System.Data.ConnectionState.Open)
                 {
-                    string cmd = "IF NOT EXIST (SELECT * FROM [JobPositions] WHERE";
+                    string cmdStr = "IF NOT EXISTS (SELECT * FROM [JobPosition] WHERE [JobPosition].[Position] = @position)\n" +
+                        "INSERT INTO[JobPosition] VALUES(@position)";
+                    SqlCommand cmd = new SqlCommand(cmdStr, cnn);
+                    cmd.Parameters.AddWithValue("@position", JobPosition.Text);
+                    cmd.ExecuteNonQuery();
+                    HomePage.HomePageBase.Current.main.Navigate(typeof(SystemUserSettings));
                 }
             }
         }

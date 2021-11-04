@@ -153,6 +153,9 @@
     <Compile Include="Settings\Diags\JobPositions.xaml.cs">
       <DependentUpon>JobPositions.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Settings\Diags\Roles.xaml.cs">
+      <DependentUpon>Roles.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Settings\Diags\SysAdmin.xaml.cs">
       <DependentUpon>SysAdmin.xaml</DependentUpon>
     </Compile>
@@ -267,6 +270,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Settings\Diags\JobPositions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Settings\Diags\Roles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -59,6 +59,7 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="TextWrapping" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.FontIcon">
       <RootProperty Name="FontFamily" />
@@ -116,10 +117,10 @@
       <RootProperty Name="Width" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Header" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="AcceptsReturn" />
       <RootProperty Name="IsSpellCheckEnabled" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="SelectionHighlightColor" />
       <RootProperty Name="MaxLength" />
     </RootType>
@@ -163,6 +164,8 @@
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Message" />
       <RootProperty Name="ActionButton" />
+      <RootProperty Name="Severity" />
+      <RootProperty Name="IsClosable" />
     </RootType>
     <RootType FullName="Windows_ClinicaDental.MainPage" />
     <RootType FullName="Windows_ClinicaDental.PacientesCitas.AppointmentsPage" />
@@ -170,12 +173,14 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ContentDialog">
       <RootProperty Name="Title" />
       <RootProperty Name="PrimaryButtonText" />
-      <RootProperty Name="IsSecondaryButtonEnabled" />
       <RootProperty Name="CloseButtonText" />
       <RootProperty Name="DefaultButton" />
       <RootProperty Name="Content" />
+      <RootProperty Name="IsSecondaryButtonEnabled" />
       <RootEvent Name="PrimaryButtonClick" />
     </RootType>
+    <RootType FullName="Windows_ClinicaDental.Settings.Diags.JobPositions" />
+    <RootType FullName="Windows_ClinicaDental.Settings.Diags.Roles" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalScrollMode" />

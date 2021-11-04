@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Windows_ClinicaDental.Settings"
     xmlns:local1="using:Windows_ClinicaDental"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -66,6 +67,10 @@
                 </StackPanel>
             </StackPanel>
             <!--#endregion-->
+            <StackPanel Orientation="Vertical" Margin="0,20,0,0" CornerRadius="11" BorderBrush="Gray" BorderThickness="1">
+                <controls:InfoBar IsOpen="True" Severity="Informational" IsClosable="False" HorizontalAlignment="Stretch"
+                                  Title="NO ME ACUERDO PORQUE HICE ESTO PERO ERA PARA ALGO NECESARIO XD"/>
+            </StackPanel>
             <!--#region UsersSettings-->
             <Grid Margin="0,20">
                 <Grid.ColumnDefinitions>
@@ -89,7 +94,7 @@
                             <TextBlock Text="Posicion Laboral"/>
                         </Grid>
                         <ListView x:Name="JobPositionsList" Height="300" Margin="0,0,0,20"
-                              ScrollViewer.VerticalScrollMode="Enabled">
+                              ScrollViewer.VerticalScrollMode="Enabled" SelectionChanged="JobPositionsList_SelectionChanged">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding Position}"/>
@@ -120,7 +125,7 @@
                             <TextBlock Text="Descripcion" Grid.Column="1"/>
                         </Grid>
                         <ListView x:Name="RolesList" Height="300" Margin="0,0,0,20"
-                              ScrollViewer.VerticalScrollMode="Enabled">
+                              ScrollViewer.VerticalScrollMode="Enabled" SelectionChanged="RolesList_SelectionChanged">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid >
@@ -129,7 +134,7 @@
                                             <ColumnDefinition Width="0.7*"/>
                                         </Grid.ColumnDefinitions>
                                         <TextBlock Text="{Binding Name}" Grid.Column="0"/>
-                                        <TextBlock Text="{Binding Description}" Grid.Column="1"/>
+                                        <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Grid.Column="1"/>
                                     </Grid>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
