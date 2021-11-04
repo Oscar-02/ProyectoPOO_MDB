@@ -60,7 +60,7 @@
                 </PasswordBox>
             </StackPanel>
             <Button x:Name="cnnTest" Style="{StaticResource AccentButtonStyle}"
-                Click="cnnTest_Click" Margin="0,15,0,0">
+                Click="cnnTest_Click" Margin="0,15">
                 <Button.Content>
                     <StackPanel Orientation="Horizontal">
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe701;"/>
@@ -69,7 +69,7 @@
                 </Button.Content>
             </Button>
         </StackPanel>
-        <controls:InfoBar x:Name="tcpInfoBar" IsOpen="True"
+        <controls:InfoBar x:Name="tcpInfoBar" IsOpen="True" IsClosable="False"
                           Title="Modo TCP/IP habilitado" CornerRadius="0">
             <controls:InfoBar.Message>
                 Si quieres usar tu PC como servidor "virtual" consulta el README.md desde el 

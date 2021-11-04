@@ -452,9 +452,6 @@
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\Datos\PatientsDataPage.xbf">
       <PackagePath>Datos\PatientsDataPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\Datos\ServicesPage.xbf">
-      <PackagePath>Datos\ServicesPage.xbf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\HomePage\HomePage.xbf">
       <PackagePath>HomePage\HomePage.xbf</PackagePath>
     </AppxPackagedFile>

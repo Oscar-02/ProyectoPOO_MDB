@@ -20,11 +20,6 @@
                 <controls:NavigationViewItem Tag="Appt" Icon="Calendar" Content="Citas"/>
                 <controls:NavigationViewItemSeparator/>
                 <controls:NavigationViewItemHeader Content="Datos"/>
-                <controls:NavigationViewItem Tag="Services" Content="Servicios">
-                    <controls:NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe719;"/>
-                    </controls:NavigationViewItem.Icon>
-                </controls:NavigationViewItem>
                 <controls:NavigationViewItem Tag="PatientsData" Content="Datos de pacientes">
                     <controls:NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xebda;"/>

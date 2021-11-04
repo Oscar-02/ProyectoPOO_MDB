@@ -53,9 +53,6 @@ namespace Windows_ClinicaDental.HomePage
                         main.Navigate(typeof(PacientesCitas.AppointmentsPage));
                         break;
                     //Seccion Datos
-                    case "Services":
-                        main.Navigate(typeof(Datos.ServicesPage));
-                        break;
                     case "PatientsData":
                         main.Navigate(typeof(Datos.PatientsDataPage));
                         break;

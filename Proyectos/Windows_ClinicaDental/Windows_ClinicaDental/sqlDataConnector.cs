@@ -438,4 +438,48 @@ namespace Windows_ClinicaDental
             return (false, null);
         }
     }
+
+    public class sqlTreatments
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public float Price { get; set; }
+
+        public static (bool, List<sqlTreatments>) GetTable()
+        {
+            List<sqlTreatments> listTreatments = new List<sqlTreatments>();
+            SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(new SettingsReader(), "ClinicaDental"));
+            try
+            {
+                cnn.Open();
+            }
+            catch
+            {
+                return (false, null);
+            }
+            if (cnn.State == ConnectionState.Open)
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [Treatments]", cnn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    sqlTreatments data = new sqlTreatments()
+                    {
+                        ID = int.Parse(reader["ID"].ToString()),
+                        Name = reader["Name"].ToString(),
+                        Description = reader["Description"].ToString(),
+                        Price = float.Parse(reader["Price"].ToString())
+                    };
+                    listTreatments.Add(data);
+                };
+                if (listTreatments.Count > 0)
+                {
+                    return (true, listTreatments);
+                }
+                else return (false, null);
+            }
+            return (false, null);
+        }
+    }
 }

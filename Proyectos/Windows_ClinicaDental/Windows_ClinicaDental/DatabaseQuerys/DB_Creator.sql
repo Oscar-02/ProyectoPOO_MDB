@@ -77,9 +77,9 @@ CREATE TABLE Patients
 CREATE TABLE Appointments
 (
   id INT PRIMARY KEY IDENTITY(1,1),
-  ID_Patient INT NOT NULL FOREIGN KEY REFERENCES [Patients](id),
-  ID_SystemUser INT NOT NULL FOREIGN KEY REFERENCES [SystemUsers](id),
-  ID_Treatment INT NOT NULL FOREIGN KEY REFERENCES [Treatments](id),
+  ID_Patient INT NOT NULL FOREIGN KEY REFERENCES [Patients](id) ON DELETE CASCADE,
+  ID_SystemUser INT NOT NULL FOREIGN KEY REFERENCES [SystemUsers](id) ON DELETE CASCADE,
+  ID_Treatment INT NOT NULL FOREIGN KEY REFERENCES [Treatments](id) ON DELETE CASCADE,
   Observations VARCHAR(MAX),
   Date DATETIME NOT NULL,
 )
@@ -132,4 +132,10 @@ GO
 
 INSERT INTO [Allergies] VALUES 
 ('Resinas'), ('Metales'), ('Primers o adhesivos dentales'), ('Materiales de impresión'), ('Anestesia local')
+GO
+
+INSERT INTO [Treatments] (Name, Description, Price) VALUES
+('Blanqueamiento dental','Consiste en quitar todas las manchas dentales que puedan tener los dientes, ya sean provocadas por causas naturales o por factores externos como la cafeína o la nicotina.', 52.90),
+('Carillas bucales de Porcelana', 'Consiste en la implantación de unas fundas estéticas compuestas por porcelana y elaboradas con resinas dentales que se colocan sobre nuestros dientes simulando su apariencia', 42.00),
+('Consulta', 'Simple consulta. El medico especifica en la info. del paciente acerca de su consulta.', 35.00)
 GO
