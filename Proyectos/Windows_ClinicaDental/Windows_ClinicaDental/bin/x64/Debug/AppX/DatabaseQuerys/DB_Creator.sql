@@ -86,19 +86,20 @@ CREATE TABLE Appointments
 END
 GO
 
---CREATE ADMIN PRIVILEGES USER
+--CREAR DATOS PARA EL ADMINISTRADOR INICIAL
 INSERT INTO [Sex] (Sex) VALUES
 ('Masculino'), ('Femenino')
 GO
 
 INSERT INTO [JobPosition] ([Position]) VALUES
-('Technical Support')
+('Soporte Tecnico')
 GO
 
 INSERT INTO [Roles] (Name, [Description]) VALUES
-('System Admin', 'Administrates all the application and database')
+('Admin del Sistema', 'Administra toda la aplicacion y la BD')
 GO
 
+--CREDENCIALES: Username: admin Password: admin (encriptado en SHA256)
 INSERT INTO [SystemUsers] (username, password, Name, LastName, ID_Sex, DateBirth, ID_JobPosition, Address, CellPhone, LandLinePhone, Role) VALUES
 ('admin', 
 '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918',
@@ -113,7 +114,7 @@ GETDATE(),
 '1')
 GO
 
---CREATES OTHER ENTRIES FOR TEST ONLY
+--CREA OTRAS ENTRADAS PARA PRUEBA
 INSERT INTO [Roles] VALUES
 ('Basic User', 'User with the lowest privileges of all program. Just for test.'),
 ('Tester User', 'User with the middle of privileges of all program. Just for test.'),
@@ -121,10 +122,14 @@ INSERT INTO [Roles] VALUES
 GO
 
 INSERT INTO [JobPosition] VALUES
-('Secretary'), ('Dentist'), ('Orthodontist'), ('Tester')
+('Secretaria'), ('Dentista'), ('Ortodoncista'), ('Tester')
 GO
 
 INSERT INTO [SystemUsers] (username, password, Name, LastName, ID_Sex, DateBirth, ID_JobPosition, Address, CellPhone, LandLinePhone, Role) VALUES
---PWD = unculero
-('josueAyala', 'f91c3082f3b7e227b096bbaeeb931529dc6377d53b99cddf97990a1cd239007c', 'Josue Alfonso', 'Ayala', 1, GETDATE(), 5, 'UNA DIRECCION', '70707070','21212121', 4)
+--PWD = pass
+('josueAyala', 'd74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1', 'Josue Alfonso', 'Ayala', 1, GETDATE(), 5, 'UNA DIRECCION', '70707070','21212121', 4)
+GO
+
+INSERT INTO [Allergies] VALUES 
+('Resinas'), ('Metales'), ('Primers o adhesivos dentales'), ('Materiales de impresión'), ('Anestesia local')
 GO

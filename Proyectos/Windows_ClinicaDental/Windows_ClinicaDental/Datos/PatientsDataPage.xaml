@@ -21,7 +21,8 @@
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Vertical" Grid.Column="0">
                 <TextBlock Text="Elementos Actuales" FontSize="20" FontWeight="SemiLight"/>
-                <ListView x:Name="listAllergies" CanDragItems="True" CanReorderItems="False" AllowDrop="False">
+                <ListView x:Name="listAllergies" CanDragItems="True" CanReorderItems="False" AllowDrop="False"
+                          DragItemsStarting="listAllergies_DragItemsStarting">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding}"/>
@@ -29,7 +30,7 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </StackPanel>
-            <Pivot Grid.Column="2" Margin="0,-15,0,0" SelectedIndex="0">
+            <Pivot Grid.Column="2" Margin="0,-15,0,0">
                 <Pivot.Title>
                     <TextBlock Text="Acciones Disponibles" FontSize="20" FontWeight="SemiLight"/>
                 </Pivot.Title>
@@ -39,13 +40,15 @@
                         <TextBlock Text="Solamente necesitas colocar el nombre del elemento a agregar."/>
                         <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
                             <TextBox x:Name="toAdd" Header="Nuevo elemento:" PlaceholderText="Alergia" Width="192"/>
-                            <Button x:Name="addToList" Style="{StaticResource AccentButtonStyle}" Margin="10,0,0,0" VerticalAlignment="Bottom">
+                            <Button x:Name="addToList" Style="{StaticResource AccentButtonStyle}" Click="addToList_Click"
+                                    Margin="10,0,0,0" VerticalAlignment="Bottom">
                                 <StackPanel Orientation="Horizontal">
                                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe82e;"/>
                                     <TextBlock Text="Agregar a la lista" Margin="5,0,0,0"/>
                                 </StackPanel>
                             </Button>
-                            <Button x:Name="removeFromList" Margin="10,0,0,0" VerticalAlignment="Bottom">
+                            <Button x:Name="removeFromList" Click="removeFromList_Click"
+                                    Margin="10,0,0,0" VerticalAlignment="Bottom">
                                 <StackPanel Orientation="Horizontal">
                                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe74d;"/>
                                     <TextBlock Text="Eliminar" Margin="5,0,0,0"/>
@@ -54,14 +57,15 @@
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0,15">
                             <TextBlock Text="Elementos por agregar" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center"/>
-                            <Button x:Name="finishAndUpdate" Background="IndianRed" Margin="10,0,0,0" VerticalAlignment="Bottom">
+                            <Button x:Name="finishAndUpdate" Background="IndianRed"  Click="finishAndUpdate_Click"
+                                    Margin="10,0,0,0" VerticalAlignment="Bottom">
                                 <StackPanel Orientation="Horizontal">
                                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe78c;"/>
                                     <TextBlock Text="Finalizar y guardar" Margin="5,0,0,0"/>
                                 </StackPanel>
                             </Button>
                         </StackPanel>
-                        <ListView x:Name="addList" CanDragItems="False" CanReorderItems="False" AllowDrop="False">
+                        <ListView x:Name="addList" CanDragItems="False" CanReorderItems="False" AllowDrop="False" SelectionChanged="addList_SelectionChanged">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding}"/>
@@ -71,7 +75,43 @@
                     </StackPanel>
                 </PivotItem>
                 <PivotItem Header="Eliminar">
-                    
+                    <StackPanel Orientation="Vertical">
+                        <RichTextBlock TextWrapping="Wrap">
+                            <Paragraph>
+                                <Bold>Instrucciones:</Bold>
+                                <LineBreak/>Desde la lista de elementos existentes, arrastra los elementos que deseas eliminar
+                                <LineBreak/>hacia la lista de elementos por eliminar y cuando estes listo, solamente presiona el boton
+                                <Italic>"Eliminar"</Italic>.
+                                <LineBreak/><Bold>Nota:</Bold> Solamente los elementos que esten en la lista se eliminaran.
+                            </Paragraph>
+                        </RichTextBlock>
+                        <ListView x:Name="deleteList" CanDragItems="False" CanReorderItems="False" AllowDrop="True"
+                                  Margin="0,10,0,0" CornerRadius="11" BorderBrush="Gray" BorderThickness="1" 
+                                  HorizontalAlignment="Left" Width="256" Height="200" 
+                                  Drop="deleteList_Drop" DragOver="deleteList_DragOver">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding}"/>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                            <Button x:Name="clear" Style="{StaticResource AccentButtonStyle}" Click="clear_Click"
+                                    VerticalAlignment="Bottom">
+                                <StackPanel Orientation="Horizontal">
+                                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe75c;"/>
+                                    <TextBlock Text="Limpiar" Margin="5,0,0,0"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="finishAndRemove" Style="{StaticResource AccentButtonStyle}" Click="finishAndRemove_Click"
+                                    Margin="5,0,0,0" VerticalAlignment="Bottom">
+                                <StackPanel Orientation="Horizontal">
+                                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xecc9;"/>
+                                    <TextBlock Text="Finalizar y remover" Margin="5,0,0,0"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
                 </PivotItem>
             </Pivot>
         </Grid>

@@ -395,4 +395,47 @@ namespace Windows_ClinicaDental
             else return (false, null);
         }
     }
+
+    public class sqlAllergies
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+
+        public static (bool, List<sqlAllergies>) GetTable()
+        {
+            List<sqlAllergies> listAllergies = new List<sqlAllergies>();
+            SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(new SettingsReader(), "ClinicaDental"));
+            try
+            {
+                cnn.Open();
+            }
+            catch
+            {
+                return (false, null);
+            }
+            if (cnn.State == ConnectionState.Open)
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [Allergies]", cnn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    sqlAllergies data = new sqlAllergies()
+                    {
+                        ID = int.Parse(reader["ID"].ToString()),
+                        Name = reader["Name"].ToString()
+                    };
+                    listAllergies.Add(data);
+                }
+                if (listAllergies.Count > 0)
+                {
+                    return (true, listAllergies);
+                }
+                else
+                {
+                    return (false, null);
+                }
+            }
+            return (false, null);
+        }
+    }
 }
