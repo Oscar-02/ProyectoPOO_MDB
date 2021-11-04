@@ -68,8 +68,9 @@
             </StackPanel>
             <!--#endregion-->
             <StackPanel Orientation="Vertical" Margin="0,20,0,0" CornerRadius="11" BorderBrush="Gray" BorderThickness="1">
-                <controls:InfoBar IsOpen="True" Severity="Informational" IsClosable="False" HorizontalAlignment="Stretch"
-                                  Title="NO ME ACUERDO PORQUE HICE ESTO PERO ERA PARA ALGO NECESARIO XD"/>
+                <controls:InfoBar IsOpen="True" Severity="Warning" IsClosable="False" HorizontalAlignment="Stretch"
+                                  Title="Advertencia" 
+                                  Message="Si eliminas una 'Posicion Laboral' o un 'Rol', automaticamente estaras eliminando al usuario con ese rol. Ten cuidado."/>
             </StackPanel>
             <!--#region UsersSettings-->
             <Grid Margin="0,20">

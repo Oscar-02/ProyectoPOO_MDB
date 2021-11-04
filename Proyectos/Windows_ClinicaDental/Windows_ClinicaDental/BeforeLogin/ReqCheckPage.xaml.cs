@@ -73,7 +73,7 @@ namespace Windows_ClinicaDental.BeforeLogin
                             }
                             else
                             {
-                                Current.actualProcessInfo.Text = "Creando la base de datos. Por favor espere.";
+                                Current.actualProcessInfo.Text = "Descargando e instalando la base de datos. Por favor no desconecte la red, esto terminara enseguida.";
                                 await Task.Delay(1000);
                                 if (await sqlDataConnector.SSdbCreator())
                                 {

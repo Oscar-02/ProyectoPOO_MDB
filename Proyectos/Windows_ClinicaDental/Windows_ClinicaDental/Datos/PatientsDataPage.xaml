@@ -3,12 +3,77 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Windows_ClinicaDental.Datos"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
-    </Grid>
+    <StackPanel Orientation="Vertical" Margin="20">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Alergias de Pacientes" FontSize="30" FontWeight="SemiBold" VerticalAlignment="Center"/>
+        </StackPanel>
+        <Grid Margin="0,15,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.35*"/>
+                <ColumnDefinition Width="0.02*"/>
+                <ColumnDefinition Width="0.63*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Column="0">
+                <TextBlock Text="Elementos Actuales" FontSize="20" FontWeight="SemiLight"/>
+                <ListView x:Name="listAllergies" CanDragItems="True" CanReorderItems="False" AllowDrop="False">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+            <Pivot Grid.Column="2" Margin="0,-15,0,0" SelectedIndex="0">
+                <Pivot.Title>
+                    <TextBlock Text="Acciones Disponibles" FontSize="20" FontWeight="SemiLight"/>
+                </Pivot.Title>
+                <PivotItem Header="Añadir">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Instrucciones:" FontWeight="SemiBold"/>
+                        <TextBlock Text="Solamente necesitas colocar el nombre del elemento a agregar."/>
+                        <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                            <TextBox x:Name="toAdd" Header="Nuevo elemento:" PlaceholderText="Alergia" Width="192"/>
+                            <Button x:Name="addToList" Style="{StaticResource AccentButtonStyle}" Margin="10,0,0,0" VerticalAlignment="Bottom">
+                                <StackPanel Orientation="Horizontal">
+                                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe82e;"/>
+                                    <TextBlock Text="Agregar a la lista" Margin="5,0,0,0"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="removeFromList" Margin="10,0,0,0" VerticalAlignment="Bottom">
+                                <StackPanel Orientation="Horizontal">
+                                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe74d;"/>
+                                    <TextBlock Text="Eliminar" Margin="5,0,0,0"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,15">
+                            <TextBlock Text="Elementos por agregar" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                            <Button x:Name="finishAndUpdate" Background="IndianRed" Margin="10,0,0,0" VerticalAlignment="Bottom">
+                                <StackPanel Orientation="Horizontal">
+                                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe78c;"/>
+                                    <TextBlock Text="Finalizar y guardar" Margin="5,0,0,0"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                        <ListView x:Name="addList" CanDragItems="False" CanReorderItems="False" AllowDrop="False">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding}"/>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                </PivotItem>
+                <PivotItem Header="Eliminar">
+                    
+                </PivotItem>
+            </Pivot>
+        </Grid>
+    </StackPanel>
 </Page>
