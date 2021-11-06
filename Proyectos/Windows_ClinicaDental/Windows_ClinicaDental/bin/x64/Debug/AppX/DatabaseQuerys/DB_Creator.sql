@@ -172,6 +172,6 @@ GO
 INSERT INTO [Patients]
   (Name, LastName, ID_Sex, DateBirth, Address, CellPhone, LandLinePhone, ID_Treatments, ID_Allergies)
 VALUES
-  ('Benito Samuel', 'Juarez Landaverde', 1, CAST(N'01-01-2001' AS DATE), 'A simple address', '71710202', '22021313', 3, 2),
-  ('Ivania Maria', 'Lebron Flores', 2, CAST(N'13-01-2002' AS DATE), 'A simple address', '72720303', '21212121', 2, 1)
+  ('Benito Samuel', 'Juarez Landaverde', 1, CAST(N'2001-01-01' AS DATE), 'A simple address', '71710202', '22021313', 3, 2),
+  ('Ivania Maria', 'Lebron Flores', 2, CAST(N'2002-01-13' AS DATE), 'A simple address', '72720303', '21212121', 2, 1)
 GO

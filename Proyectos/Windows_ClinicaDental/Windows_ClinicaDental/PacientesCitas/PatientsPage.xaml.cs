@@ -62,7 +62,7 @@ namespace Windows_ClinicaDental.PacientesCitas
                 if (edit == null)
                 {
                     cmdStr = "IF NOT EXISTS (SELECT * FROM [Patients] WHERE Name = @name)\n" +
-                        "INSERT INTO [Patients (Name, LastName, ID_Sex, DateBirth, Address, CellPhone, LandLinePhone, ID_Treatments, ID_Allergies)\n" +
+                        "INSERT INTO [Patients] (Name, LastName, ID_Sex, DateBirth, Address, CellPhone, LandLinePhone, ID_Treatments, ID_Allergies)\n" +
                         "VALUES (@name, @lastname, @sex, @datebirth, @address, @cellphone, @landlinephone, @treatment, @allergy)";
                     cmd.CommandText = cmdStr;
                     cmd.Parameters.AddWithValue("@name", nameP.Text);
@@ -97,7 +97,7 @@ namespace Windows_ClinicaDental.PacientesCitas
                     cmd = new SqlCommand();
                     cmd.Connection = cnn;
                     cmdStr = "IF NOT EXISTS (SELECT * FROM [Patients] WHERE Name = @name)\n" +
-                        "INSERT INTO [Patients (Name, LastName, ID_Sex, DateBirth, Address, CellPhone, LandLinePhone, ID_Treatments, ID_Allergies)\n" +
+                        "INSERT INTO [Patients] (Name, LastName, ID_Sex, DateBirth, Address, CellPhone, LandLinePhone, ID_Treatments, ID_Allergies)\n" +
                         "VALUES (@name, @lastname, @sex, @datebirth, @address, @cellphone, @landlinephone, @treatment, @allergy)";
                     cmd.CommandText = cmdStr;
                     cmd.Parameters.AddWithValue("@name", nameP.Text);
@@ -160,11 +160,11 @@ namespace Windows_ClinicaDental.PacientesCitas
                 (_, var listA) = sqlAllergies.GetTable();
                 var selected = patientsList.SelectedItem as PatientsPageBase;
                 Patients data = new Patients();
-                edit = data;
                 foreach (var item in listPatients)
                 {
                     if (item.Name + " " + item.LastName == selected.Name) data = item;
                 }
+                edit = data;
                 nameP.Text = data.Name;
                 lastNameP.Text = data.LastName;
                 sexP.SelectedItem = data.Sex;
