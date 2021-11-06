@@ -482,4 +482,63 @@ namespace Windows_ClinicaDental
             return (false, null);
         }
     }
+    
+    public class sqlPatients
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string LastName { get; set; }
+        public int ID_Sex { get; set; }
+        public DateTime DateBirth { get; set; }
+        public string Address { get; set; }
+        public string CellPhone { get; set; }
+        public string LandLinePhone { get; set; }
+        public int ID_Treatments { get; set; }
+        public int ID_Allergies { get; set; }
+
+        public static (bool, List<sqlPatients>) GetTable()
+        {
+            List<sqlPatients> listPatients = new List<sqlPatients>();
+            SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(new SettingsReader(), "ClinicaDental"));
+            try
+            {
+                cnn.Open();
+            }
+            catch
+            {
+                return (false, null);
+            }
+            if (cnn.State == ConnectionState.Open)
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [Patients]", cnn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    sqlPatients data = new sqlPatients()
+                    {
+                        ID = int.Parse(reader["ID"].ToString()),
+                        Name = reader["Name"].ToString(),
+                        LastName = reader["LastName"].ToString(),
+                        ID_Sex = int.Parse(reader["ID_Sex"].ToString()),
+                        DateBirth = reader.GetDateTime(4),
+                        Address = reader["Address"].ToString(),
+                        CellPhone = reader["CellPhone"].ToString(),
+                        LandLinePhone = reader["LandLinePhone"].ToString(),
+                        ID_Treatments = int.Parse(reader["ID_Treatments"].ToString()),
+                        ID_Allergies = int.Parse(reader["ID_Allergies"].ToString())
+                    };
+                    listPatients.Add(data);
+                }
+                if (listPatients.Count > 0)
+                {
+                    return(true, listPatients);
+                }
+                else
+                {
+                    return(false, null);
+                }
+            }
+            else return (false, null);
+        }
+    }
 }

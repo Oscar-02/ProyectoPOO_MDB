@@ -65,8 +65,9 @@ BEGIN
   CREATE TABLE Patients
   (
     id INT PRIMARY KEY IDENTITY(1,1),
-    username VARCHAR(10) NOT NULL UNIQUE,
-    password VARCHAR(64) NOT NULL,
+    --USERNAME Y PASSWORD IBA A USARSE PARA ANDROID (Activar esto para empezar a desarrollar directamente)
+    --username VARCHAR(10) NOT NULL UNIQUE,
+    --password VARCHAR(64) NOT NULL,
     Name VARCHAR(60) NOT NULL,
     LastName VARCHAR(70) NOT NULL,
     ID_Sex INT NOT NULL FOREIGN KEY REFERENCES [Sex](id) ON DELETE CASCADE,
@@ -152,6 +153,7 @@ GO
 
 INSERT INTO [Allergies]
 VALUES
+  ('Ninguna'),
   ('Resinas'),
   ('Metales'),
   ('Primers o adhesivos dentales'),
@@ -165,4 +167,11 @@ VALUES
   ('Blanqueamiento dental', 'Consiste en quitar todas las manchas dentales que puedan tener los dientes, ya sean provocadas por causas naturales o por factores externos como la cafeína o la nicotina.', 52.90),
   ('Carillas bucales de Porcelana', 'Consiste en la implantación de unas fundas estéticas compuestas por porcelana y elaboradas con resinas dentales que se colocan sobre nuestros dientes simulando su apariencia', 42.00),
   ('Consulta', 'Simple consulta. El medico especifica en la info. del paciente acerca de su consulta.', 35.00)
+GO
+
+INSERT INTO [Patients]
+  (Name, LastName, ID_Sex, DateBirth, Address, CellPhone, LandLinePhone, ID_Treatments, ID_Allergies)
+VALUES
+  ('Benito Samuel', 'Juarez Landaverde', 1, CAST(N'01-01-2001' AS DATE), 'A simple address', '71710202', '22021313', 3, 2),
+  ('Ivania Maria', 'Lebron Flores', 2, CAST(N'13-01-2002' AS DATE), 'A simple address', '72720303', '21212121', 2, 1)
 GO

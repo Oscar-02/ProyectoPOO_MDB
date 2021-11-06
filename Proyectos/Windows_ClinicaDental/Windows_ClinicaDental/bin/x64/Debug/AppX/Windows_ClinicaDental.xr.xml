@@ -4,6 +4,7 @@
     <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Price" />
     <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="Treatments" />
     <RootPropertyPathName Name="Position" />
     <RootPropertyPathName Name="LandLinePhone" />
     <RootPropertyPathName Name="Cellphone" />
@@ -109,9 +110,10 @@
       <RootProperty Name="AcceptsReturn" />
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="MaxLength" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="IsSpellCheckEnabled" />
       <RootProperty Name="SelectionHighlightColor" />
-      <RootProperty Name="MaxLength" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Style" />
@@ -121,6 +123,7 @@
       <RootProperty Name="Background" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Name" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Microsoft.UI.Xaml.Controls.NumberBox">
@@ -163,6 +166,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Icon" />
+      <RootProperty Name="Name" />
       <RootProperty Name="Label" />
       <RootProperty Name="IsEnabled" />
       <RootEvent Name="Click" />
@@ -253,6 +257,21 @@
     <RootType FullName="Windows_ClinicaDental.LoginPage.LoginPage" />
     <RootType FullName="Windows_ClinicaDental.MainPage" />
     <RootType FullName="Windows_ClinicaDental.PacientesCitas.AppointmentsPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="Header" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Items" />
+      <RootProperty Name="Width" />
+      <RootEvent Name="SelectionChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
+      <RootProperty Name="Header" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Margin" />
+    </RootType>
     <RootType FullName="Windows_ClinicaDental.PacientesCitas.PatientsPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ContentDialog">
       <RootProperty Name="Title" />
@@ -265,21 +284,6 @@
     </RootType>
     <RootType FullName="Windows_ClinicaDental.Settings.Diags.JobPositions" />
     <RootType FullName="Windows_ClinicaDental.Settings.Diags.Roles" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
-      <RootProperty Name="Header" />
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Items" />
-      <RootProperty Name="Width" />
-      <RootEvent Name="SelectionChanged" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
-      <RootProperty Name="Header" />
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
-    </RootType>
     <RootType FullName="Windows_ClinicaDental.Settings.Diags.SysAdmin" />
     <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
       <RootProperty Name="Content" />
