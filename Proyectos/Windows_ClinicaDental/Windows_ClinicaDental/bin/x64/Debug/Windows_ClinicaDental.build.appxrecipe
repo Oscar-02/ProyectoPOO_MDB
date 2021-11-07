@@ -40,10 +40,10 @@
     <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\microsoft.bcl.asyncinterfaces\1.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
       <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\microsoft.data.sqlclient\3.0.1\runtimes\win\lib\netstandard2.0\Microsoft.Data.SqlClient.dll">
+    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\microsoft.data.sqlclient\4.0.0-preview3.21293.2\runtimes\win\lib\netstandard2.0\Microsoft.Data.SqlClient.dll">
       <PackagePath>Microsoft.Data.SqlClient.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\microsoft.data.sqlclient.sni.runtime\3.0.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll">
+    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\microsoft.data.sqlclient.sni.runtime\4.0.0-preview1.21232.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll">
       <PackagePath>Microsoft.Data.SqlClient.SNI.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\microsoft.identity.client\4.22.0\lib\uap10.0\Microsoft.Identity.Client.dll">
@@ -160,7 +160,7 @@
     <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.codedom\4.7.0\lib\netstandard2.0\System.CodeDom.dll">
       <PackagePath>System.CodeDom.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.configuration.configurationmanager\4.7.0\lib\netstandard2.0\System.Configuration.ConfigurationManager.dll">
+    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.configuration.configurationmanager\5.0.0\lib\netstandard2.0\System.Configuration.ConfigurationManager.dll">
       <PackagePath>System.Configuration.ConfigurationManager.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.data.oledb\4.7.0\runtimes\win\lib\netstandard2.0\System.Data.OleDb.dll">
@@ -181,10 +181,10 @@
     <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.management\4.7.0\lib\netstandard2.0\System.Management.dll">
       <PackagePath>System.Management.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.runtime.caching\4.7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll">
+    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.runtime.caching\5.0.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll">
       <PackagePath>System.Runtime.Caching.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.runtime.compilerservices.unsafe\4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.runtime.compilerservices.unsafe\5.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.runtime.loader\4.3.0\lib\netstandard1.5\System.Runtime.Loader.dll">
@@ -193,16 +193,16 @@
     <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.security.accesscontrol\6.0.0-preview.5.21301.5\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll">
       <PackagePath>System.Security.AccessControl.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.security.cryptography.protecteddata\4.7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll">
+    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.security.cryptography.protecteddata\5.0.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll">
       <PackagePath>System.Security.Cryptography.ProtectedData.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.security.permissions\4.7.0\lib\netstandard2.0\System.Security.Permissions.dll">
+    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.security.permissions\5.0.0\lib\netstandard2.0\System.Security.Permissions.dll">
       <PackagePath>System.Security.Permissions.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.security.principal.windows\6.0.0-preview.5.21301.5\runtimes\win\lib\netstandard2.0\System.Security.Principal.Windows.dll">
       <PackagePath>System.Security.Principal.Windows.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.text.encoding.codepages\4.7.0\runtimes\win\lib\netstandard2.0\System.Text.Encoding.CodePages.dll">
+    <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.text.encoding.codepages\5.0.0\runtimes\win\lib\netstandard2.0\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\system.text.encodings.web\4.7.2\lib\netstandard2.0\System.Text.Encodings.Web.dll">

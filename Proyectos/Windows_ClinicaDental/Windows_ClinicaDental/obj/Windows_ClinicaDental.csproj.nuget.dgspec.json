@@ -41,7 +41,7 @@
           "dependencies": {
             "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[3.0.1, )"
+              "version": "[4.0.0-preview3.21293.2, )"
             },
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",

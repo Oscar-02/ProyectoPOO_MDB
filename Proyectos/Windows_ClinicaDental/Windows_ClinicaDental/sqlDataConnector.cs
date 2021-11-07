@@ -22,9 +22,9 @@ namespace Windows_ClinicaDental
         public static bool SQLServerCnnTest() //Prueba si se puede conectar SQL Server
         {
             SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(sqlSettings,"master"));
+            cnn.Open();
             try
             {
-                cnn.Open();
             }
             catch (SqlException)
             {

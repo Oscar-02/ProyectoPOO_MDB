@@ -38,7 +38,7 @@ namespace Windows_ClinicaDental
             string authMode = settings.sqlLoginMode == "Windows" ? "Integrated Security=True" : "Integrated Security=False";
             string server = settings.sqlPingMode == "local" ? "Data Source=(local)" : "Data Source=" + settings.sqlPingServer + "," + settings.sqlPingPort;
             string intialCat = "Initial Catalog=" + CatalogInit;
-            string cnnStr = server + ";" + authMode + ";" + intialCat + ";";
+            string cnnStr = server + "; TrustServerCertificate=True;" + authMode + ";" + intialCat + ";";
             if (settings.sqlLoginMode != "Windows")
             {
                 cnnStr += "User Id=" + settings.sqlUser + ";" + "Password=" + settings.sqlPwd + ";";

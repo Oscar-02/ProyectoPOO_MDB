@@ -185,14 +185,16 @@ namespace Windows_ClinicaDental.BeforeLogin
             }
             if (!fontState)
             {
-                Process.Start(Environment.CurrentDirectory + @"\SegoeIcons.ttf");
+                Uri launch = new Uri(@"https://aka.ms/SegoeFluentIcons");
+                await Windows.System.Launcher.LaunchUriAsync(launch);
                 ContentDialog dialog = new ContentDialog();
                 dialog.Title = "Instalar nueva fuente";
-                dialog.Content = "Antes de continuar...\n" +
-                    "En estos momentos se acaba de mostrar una ventana de vista previa de fuentes. " +
+                dialog.Content = "Antes de continuar...\n\n" +
+                    "En estos momentos se acaba de mostrar una ventana de descarga desde el navegador. " +
                     "Esto significa que en estos momentos no tienes la fuente requerida instalada en tu " +
-                    "PC / Cuenta de Usuario.\n" +
-                    "Para que puedas ver los iconos de la aplicacion de manera completa, necesitamos que instales la fuente requerida en la ventana.";
+                    "PC / Cuenta de Usuario.\n\n" +
+                    "Para que puedas ver los iconos de la aplicacion de manera completa, necesitamos que instales la fuente. Solo debes decomprimir el archivo\n" +
+                    "e instalar el archivo .ttf\n\nNo te preocupes, la descarga se realiza desde la pagina oficial de Microsoft.";
                 dialog.CloseButtonText = "Listo";
                 dialog.IsPrimaryButtonEnabled = false;
                 dialog.IsSecondaryButtonEnabled = false;
