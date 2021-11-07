@@ -125,9 +125,6 @@
     <Compile Include="Datos\PatientsDataPage.xaml.cs">
       <DependentUpon>PatientsDataPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HomePage\HomePage.xaml.cs">
-      <DependentUpon>HomePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="HomePage\HomePageBase.xaml.cs">
       <DependentUpon>HomePageBase.xaml</DependentUpon>
     </Compile>
@@ -235,10 +232,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Datos\PatientsDataPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HomePage\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

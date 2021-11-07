@@ -4,12 +4,15 @@
     <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Price" />
     <RootPropertyPathName Name="Name" />
-    <RootPropertyPathName Name="Treatments" />
     <RootPropertyPathName Name="Position" />
+    <RootPropertyPathName Name="LastName" />
+    <RootPropertyPathName Name="SystemUser" />
+    <RootPropertyPathName Name="Treatment" />
+    <RootPropertyPathName Name="Date" />
+    <RootPropertyPathName Name="Treatments" />
     <RootPropertyPathName Name="LandLinePhone" />
     <RootPropertyPathName Name="Cellphone" />
     <RootPropertyPathName Name="Role" />
-    <RootPropertyPathName Name="LastName" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -110,9 +113,9 @@
       <RootProperty Name="AcceptsReturn" />
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="IsSpellCheckEnabled" />
       <RootProperty Name="MaxLength" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="IsSpellCheckEnabled" />
       <RootProperty Name="SelectionHighlightColor" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
@@ -166,8 +169,8 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Icon" />
-      <RootProperty Name="Name" />
       <RootProperty Name="Label" />
+      <RootProperty Name="Name" />
       <RootProperty Name="IsEnabled" />
       <RootEvent Name="Click" />
     </RootType>
@@ -201,7 +204,6 @@
       <RootProperty Name="Inlines" />
     </RootType>
     <RootType FullName="Windows_ClinicaDental.Datos.PatientsDataPage" />
-    <RootType FullName="Windows_ClinicaDental.HomePage.HomePage" />
     <RootType FullName="Microsoft.UI.Xaml.Controls.NavigationView">
       <RootProperty Name="IsPaneOpen" />
       <RootProperty Name="IsSettingsVisible" />
@@ -210,13 +212,13 @@
       <RootProperty Name="Content" />
       <RootEvent Name="ItemInvoked" />
     </RootType>
+    <RootType FullName="Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator" />
+    <RootType FullName="Microsoft.UI.Xaml.Controls.NavigationViewItemHeader">
+      <RootProperty Name="Content" />
+    </RootType>
     <RootType FullName="Microsoft.UI.Xaml.Controls.NavigationViewItem">
       <RootProperty Name="Tag" />
       <RootProperty Name="Icon" />
-      <RootProperty Name="Content" />
-    </RootType>
-    <RootType FullName="Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator" />
-    <RootType FullName="Microsoft.UI.Xaml.Controls.NavigationViewItemHeader">
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
@@ -256,22 +258,35 @@
     </RootType>
     <RootType FullName="Windows_ClinicaDental.LoginPage.LoginPage" />
     <RootType FullName="Windows_ClinicaDental.MainPage" />
-    <RootType FullName="Windows_ClinicaDental.PacientesCitas.AppointmentsPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Header" />
       <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Items" />
       <RootProperty Name="Width" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Items" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
+      <RootProperty Name="Width" />
       <RootProperty Name="Header" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Margin" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TimePicker">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Header" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
+      <RootProperty Name="OffContent" />
+      <RootProperty Name="OnContent" />
+      <RootProperty Name="IsOn" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootEvent Name="Toggled" />
+    </RootType>
+    <RootType FullName="Windows_ClinicaDental.PacientesCitas.AppointmentsPage" />
     <RootType FullName="Windows_ClinicaDental.PacientesCitas.PatientsPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ContentDialog">
       <RootProperty Name="Title" />

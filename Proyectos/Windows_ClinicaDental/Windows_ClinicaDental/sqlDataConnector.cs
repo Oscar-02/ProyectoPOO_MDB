@@ -207,6 +207,7 @@ namespace Windows_ClinicaDental
     public class sqlSystemUsers
     {
         #region sqlSysUsersVar
+        public int ID { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
@@ -240,6 +241,7 @@ namespace Windows_ClinicaDental
                 while (reader.Read())
                 {
                     sqlSystemUsers data = new sqlSystemUsers();
+                    data.ID = int.Parse(reader["id"].ToString());
                     data.Username = reader["username"].ToString();
                     data.Password = reader["password"].ToString();
                     data.Name = reader["Name"].ToString();
@@ -537,6 +539,54 @@ namespace Windows_ClinicaDental
                 {
                     return(false, null);
                 }
+            }
+            else return (false, null);
+        }
+    }
+
+    public class sqlAppointments
+    {
+        public int ID { get; set; }
+        public int ID_Patient { get; set; }
+        public int ID_SystemUser { get; set; }
+        public int ID_Treatment { get; set; }
+        public string Observations { get; set; }
+        public DateTime Date { get; set; }
+
+        public static (bool, List<sqlAppointments>) GetTable()
+        {
+            List<sqlAppointments> listApp = new List<sqlAppointments>();
+            SqlConnection cnn = new SqlConnection(SettingsReader.sqlCnnStringMaker(new SettingsReader(), "ClinicaDental"));
+            try
+            {
+                cnn.Open();
+            }
+            catch
+            {
+                return (false, null);
+            }
+            if (cnn.State == ConnectionState.Open)
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [Appointments] ORDER BY Date ASC", cnn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    sqlAppointments data = new sqlAppointments()
+                    {
+                        ID = int.Parse(reader["ID"].ToString()),
+                        ID_Patient = int.Parse(reader["ID_Patient"].ToString()),
+                        ID_SystemUser = int.Parse(reader["ID_SystemUser"].ToString()),
+                        ID_Treatment = int.Parse(reader["ID_Treatment"].ToString()),
+                        Observations = reader["Observations"].ToString(),
+                        Date = reader.GetDateTime(5)
+                    };
+                    listApp.Add(data);
+                }
+                if (listApp.Count > 0)
+                {
+                    return (true, listApp);
+                }
+                else return (false, null);
             }
             else return (false, null);
         }

@@ -13,7 +13,6 @@
         <controls:NavigationView x:Name="navView" IsPaneOpen="False" ItemInvoked="navView_ItemInvoked"
                                  IsSettingsVisible="False">
             <controls:NavigationView.MenuItems>
-                <controls:NavigationViewItem Tag="Home" Icon="Home" Content="Inicio"/>
                 <controls:NavigationViewItemSeparator/>
                 <controls:NavigationViewItemHeader Content="Pacientes y citas"/>
                 <controls:NavigationViewItem Tag="Patients" Icon="People" Content="Pacientes"/>

@@ -175,3 +175,10 @@ VALUES
   ('Benito Samuel', 'Juarez Landaverde', 1, CAST(N'2001-01-01' AS DATE), 'A simple address', '71710202', '22021313', 3, 2),
   ('Ivania Maria', 'Lebron Flores', 2, CAST(N'2002-01-13' AS DATE), 'A simple address', '72720303', '21212121', 2, 1)
 GO
+
+INSERT INTO [Appointments]
+  (ID_Patient, ID_SystemUser, ID_Treatment, Observations, Date)
+VALUES
+  (2, 2, 1, 'Informational Observation', CAST(N'2021-11-04 05:00 PM' AS datetime)),
+  (1, 2, 3, 'Informational Observation BUT IS LONGER', CAST(N'2021-12-06 05:00 PM' AS datetime))
+GO

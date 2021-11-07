@@ -32,6 +32,7 @@ namespace Windows_ClinicaDental.HomePage
         {
             this.InitializeComponent();
             Current = this;
+            main.Navigate(typeof(PacientesCitas.AppointmentsPage));
         }
 
         private void navView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -42,9 +43,6 @@ namespace Windows_ClinicaDental.HomePage
                 string page = args.InvokedItemContainer.Tag.ToString();
                 switch (page)
                 {
-                    case "Home":
-                        main.Navigate(typeof(HomePage));
-                        break;
                     //Seccion Pacientes y ServicesPage
                     case "Patients":
                         main.Navigate(typeof(PacientesCitas.PatientsPage));
