@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="ClinicaDental"
-    Publisher="CN=oscar"
-    Version="1.0.0.0" />
+    Name="51665OscarCaas.AdministradordeClinicaDental"
+    Publisher="CN=7BEC2FDD-1A23-40BB-881E-4FE83E397BAC"
+    Version="1.0.6.0" />
 
-  <mp:PhoneIdentity PhoneProductId="96dbff5b-2e47-4a96-9b76-44f3ada907d9" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="ec9e9526-2453-41f5-9f43-7e4b3b7bca25" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Windows_ClinicaDental</DisplayName>
-    <PublisherDisplayName>oscar</PublisherDisplayName>
+    <DisplayName>Administrador de Clinica Dental</DisplayName>
+    <PublisherDisplayName>Oscar Cañas</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -37,7 +37,7 @@
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="Aplicacion que permite la administración  de pacientes, citas, servicios y empleados de una clinica dental."
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Square71x71Logo.png" Square310x310Logo="Assets\Square310x310Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Square71x71Logo.png" Square310x310Logo="Assets\Square310x310Logo.png" ShortName="Admin. Clinica Dental">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square310x310Logo"/>
           </uap:ShowNameOnTiles>
@@ -46,6 +46,7 @@
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="landscape"/>
           <uap:Rotation Preference="landscapeFlipped"/></uap:InitialRotationPreference>
+        <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badge"/>
       </uap:VisualElements>
     </Application>
   </Applications>

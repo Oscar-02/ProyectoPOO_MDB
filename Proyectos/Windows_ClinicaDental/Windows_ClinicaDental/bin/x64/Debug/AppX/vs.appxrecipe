@@ -8,8 +8,8 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x64</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
-    <PackageIdentityName>96dbff5b-2e47-4a96-9b76-44f3ada907d9</PackageIdentityName>
-    <PackageIdentityPublisher>CN=oscar</PackageIdentityPublisher>
+    <PackageIdentityName>ec9e9526-2453-41f5-9f43-7e4b3b7bca25</PackageIdentityName>
+    <PackageIdentityPublisher>CN=7BEC2FDD-1A23-40BB-881E-4FE83E397BAC</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
@@ -19,24 +19,24 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>4B23894FCAFB615FC6A2A8E89DF3E4655F227BC93970279637001B4C3626E11E</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>ClinicaDental_1.0.0.0_x64__qb8r2scrqm7kc</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>ClinicaDental_qb8r2scrqm7kc!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>ClinicaDental</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=oscar</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <RegisteredManifestChecksum>67090C3F5569AB7BBE2ACC84CFC7222103DE4435CB29E4839F5CFC83F92A11D9</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>51665OscarCaas.AdministradordeClinicaDental_1.0.2.0_x64__hpmnt9yt3xkhw</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>51665OscarCaas.AdministradordeClinicaDental_hpmnt9yt3xkhw!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>51665OscarCaas.AdministradordeClinicaDental</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=7BEC2FDD-1A23-40BB-881E-4FE83E397BAC</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.2.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-07T06:16:32.026</Modified>
+      <Modified>2021-11-07T15:45:57.228</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\Windows_ClinicaDental.exe">
       <PackagePath>entrypoint\Windows_ClinicaDental.exe</PackagePath>
-      <Modified>2021-11-07T06:16:30.995</Modified>
+      <Modified>2021-11-07T15:45:55.407</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\microsoft.web.webview2\1.0.1018-prerelease\build\..\runtimes\win-x64\native_uap\Microsoft.Web.WebView2.Core.dll">
       <PackagePath>Microsoft.Web.WebView2.Core.dll</PackagePath>
@@ -306,6 +306,31 @@
       <PackagePath>Microsoft.Web.WebView2.Core.winmd</PackagePath>
       <Modified>2021-09-17T07:30:58.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\Assets\BadgeLogo.scale-100.png">
+      <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-11-07T08:08:42.693</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\Assets\BadgeLogo.scale-125.png">
+      <PackagePath>Assets\BadgeLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-11-07T08:08:37.064</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\Assets\BadgeLogo.scale-150.png">
+      <PackagePath>Assets\BadgeLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-11-07T08:08:30.697</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\Assets\BadgeLogo.scale-200.png">
+      <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-11-07T08:08:24.042</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\Assets\BadgeLogo.scale-400.png">
+      <PackagePath>Assets\BadgeLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-11-07T08:08:16.408</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -486,6 +511,31 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-11-07T03:12:50.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-11-07T08:07:54.995</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-11-07T08:07:48.528</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-11-07T08:07:41.255</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-11-07T08:07:34.707</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-11-07T08:07:25.236</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -527,11 +577,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-07T03:12:50.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-11-07T03:12:50.000</Modified>
     </AppxPackagedFile>
@@ -578,55 +623,55 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-11-07T06:16:30.772</Modified>
+      <Modified>2021-11-07T15:45:55.114</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\BeforeLogin\ReqCheckPage.xbf">
       <PackagePath>BeforeLogin\ReqCheckPage.xbf</PackagePath>
-      <Modified>2021-11-07T06:16:30.772</Modified>
+      <Modified>2021-11-07T15:45:55.114</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\Datos\PatientsDataPage.xbf">
       <PackagePath>Datos\PatientsDataPage.xbf</PackagePath>
-      <Modified>2021-11-07T06:16:30.754</Modified>
+      <Modified>2021-11-07T15:45:55.095</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\HomePage\HomePageBase.xbf">
       <PackagePath>HomePage\HomePageBase.xbf</PackagePath>
-      <Modified>2021-11-07T06:16:30.773</Modified>
+      <Modified>2021-11-07T15:45:55.115</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\LoginPage\LoginPage.xbf">
       <PackagePath>LoginPage\LoginPage.xbf</PackagePath>
-      <Modified>2021-11-07T06:16:30.773</Modified>
+      <Modified>2021-11-07T15:45:55.115</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-11-07T06:16:30.773</Modified>
+      <Modified>2021-11-07T15:45:55.115</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\PacientesCitas\AppointmentsPage.xbf">
       <PackagePath>PacientesCitas\AppointmentsPage.xbf</PackagePath>
-      <Modified>2021-11-07T06:16:30.761</Modified>
+      <Modified>2021-11-07T15:45:55.103</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\PacientesCitas\PatientsPage.xbf">
       <PackagePath>PacientesCitas\PatientsPage.xbf</PackagePath>
-      <Modified>2021-11-07T06:16:30.764</Modified>
+      <Modified>2021-11-07T15:45:55.105</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\Settings\Diags\JobPositions.xbf">
       <PackagePath>Settings\Diags\JobPositions.xbf</PackagePath>
-      <Modified>2021-11-07T06:16:30.773</Modified>
+      <Modified>2021-11-07T15:45:55.115</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\Settings\Diags\Roles.xbf">
       <PackagePath>Settings\Diags\Roles.xbf</PackagePath>
-      <Modified>2021-11-07T06:16:30.773</Modified>
+      <Modified>2021-11-07T15:45:55.115</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\Settings\Diags\SysAdmin.xbf">
       <PackagePath>Settings\Diags\SysAdmin.xbf</PackagePath>
-      <Modified>2021-11-07T06:16:30.774</Modified>
+      <Modified>2021-11-07T15:45:55.116</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\Settings\Settings.xbf">
       <PackagePath>Settings\Settings.xbf</PackagePath>
-      <Modified>2021-11-07T06:16:30.768</Modified>
+      <Modified>2021-11-07T15:45:55.110</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\Settings\SystemUserSettings.xbf">
       <PackagePath>Settings\SystemUserSettings.xbf</PackagePath>
-      <Modified>2021-11-07T06:16:30.772</Modified>
+      <Modified>2021-11-07T15:45:55.114</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -634,11 +679,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-11-07T06:14:45.180</Modified>
+      <Modified>2021-11-07T15:45:56.292</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\Desktop\U - CICLO II\ProyectoPOO_MDB\Proyectos\Windows_ClinicaDental\Windows_ClinicaDental\bin\x64\Debug\Core\Windows_ClinicaDental.exe">
       <PackagePath>Windows_ClinicaDental.exe</PackagePath>
-      <Modified>2021-11-07T06:16:32.020</Modified>
+      <Modified>2021-11-07T15:45:57.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\oscar\.nuget\packages\microsoft.ui.xaml\2.8.0-prerelease.210927001\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>
