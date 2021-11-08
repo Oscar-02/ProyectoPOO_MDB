@@ -56,7 +56,7 @@ Para instalar esta aplicacion se requiere que se sigan los siguientes pasos y ad
 2. [Descargue](https://github.com/Oscar-02/ProyectoPOO_MDB/archive/refs/heads/master.zip)  o clone este repositorio con <br/>
 ` git clone https://github.com/Oscar-02/ProyectoPOO_MDB.git `
 3. Abra Visual Studio sin ningun proyecto y/o solucion abierto.
-    1. Desde la barra de menus (arriba de la ventana de Visual Studio), dirijase a **Extensiones > Administrar extensiones** <img src = "README Resources\Install Images\extensions.png"/><br/>
+    1. Desde la barra de menus (arriba de la ventana de Visual Studio), dirijase a **Extensiones > Administrar extensiones**<br/> <img src = "README Resources\Install Images\extensions.png"/><br/>
     2. Desde la ventana "Administrar extensiones" busque `Windows App SDK` y presione **Descargar** (tambien puede descargarlo desde [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftProjectReunionPreview)). <br/>
     **Nota:** Una vez descargado se le solicitara cerrar Visual Studio para instalarla.<img src="README Resources\Install Images\extensionName.png"><br/>
     3. Una vez cerrado Visual Studio, iniciara el asistente de instalacion de extensiones de Visual Studio (VSIX Installer) y cuando aparezca la pantalla con el nombre de la extension, presione en **Modify**. <br/>
