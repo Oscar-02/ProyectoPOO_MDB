@@ -56,16 +56,16 @@ Para instalar esta aplicacion se requiere que se sigan los siguientes pasos y ad
 2. [Descargue](https://github.com/Oscar-02/ProyectoPOO_MDB/archive/refs/heads/master.zip)  o clone este repositorio con <br/>
 ` git clone https://github.com/Oscar-02/ProyectoPOO_MDB.git `
 3. Abra Visual Studio sin ningun proyecto y/o solucion abierto.
-    1. Desde la barra de menus (arriba de la ventana de Visual Studio), dirijase a **Extensiones > Administrar extensiones** <img src = "README Resources\Install Images\extensions.png"/>
+    1. Desde la barra de menus (arriba de la ventana de Visual Studio), dirijase a **Extensiones > Administrar extensiones** <img src = "README Resources\Install Images\extensions.png"/><br/>
     2. Desde la ventana "Administrar extensiones" busque `Windows App SDK` y presione **Descargar** (tambien puede descargarlo desde [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftProjectReunionPreview)). <br/>
-    **Nota:** Una vez descargado se le solicitara cerrar Visual Studio para instalarla.<img src="README Resources\Install Images\extensionName.png">
+    **Nota:** Una vez descargado se le solicitara cerrar Visual Studio para instalarla.<img src="README Resources\Install Images\extensionName.png"><br/>
     3. Una vez cerrado Visual Studio, iniciara el asistente de instalacion de extensiones de Visual Studio (VSIX Installer) y cuando aparezca la pantalla con el nombre de la extension, presione en **Modify**. <br/>
-    <img src="README Resources\Install Images\extInstall.png" Width="265.5"/>
+    <img src="README Resources\Install Images\extInstall.png" Width="265.5"/><br/>
     4. Una vez finalizado, cierre el asistente y siga al paso 4.
 4. Desde la carpeta raiz, dirijase a _Proyectos > Windows_ClinicaDental > Windows_ClinicaDental.sln_ y ejecutelo. Espere que finalice la carga.<br/>
 **NOTA:** El tiempo que demora en abrir depende de muchos factores, entre ellos la edicion de Visual Studio. VS2019 es mas lento que VS2022 pero no afecta en el desarrollo de la aplicacion.
 5. Vayase a la barra de menus y dirijase a _Herramientas > Administrador de paquetes NuGet > Consola del administrador de paquetes. Se arbrira una consola de PowerShell.<br/><img src="README Resources\NuGet Install\shortcut.png" Width="410"/><br/>
-6. Instale **cada uno de los paquetes enlistados** en la seccion [Paquetes Nuget](#nuget). Un ejemplo de como debe instalarse:<br/><img src="README Resources\NuGet Install\install.png">
+6. Instale **cada uno de los paquetes enlistados** en la seccion [Paquetes Nuget](#nuget). Un ejemplo de como debe instalarse:<br/><img src="README Resources\NuGet Install\install.png"><br/>
 7. Si ya se ha finalizado la instalacion de TODOS los paquetes enlistados, puede ejecutar la aplicacion y listo. A partir de ese momento, puede abrir la aplicacion desde el menu Inicio sin ningun inconveniente.
 
 
